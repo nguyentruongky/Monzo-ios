@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26916B3B26CB586000AC9436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B3A26CB586000AC9436 /* AppDelegate.swift */; };
+		26916B3D26CB586000AC9436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B3C26CB586000AC9436 /* SceneDelegate.swift */; };
+		26916B3F26CB586000AC9436 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B3E26CB586000AC9436 /* ViewController.swift */; };
+		26916B4226CB586000AC9436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26916B4026CB586000AC9436 /* Main.storyboard */; };
+		26916B4426CB586D00AC9436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26916B4326CB586D00AC9436 /* Assets.xcassets */; };
+		26916B4726CB586D00AC9436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26916B4526CB586D00AC9436 /* LaunchScreen.storyboard */; };
+		26916B5226CB586E00AC9436 /* MonzoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B5126CB586E00AC9436 /* MonzoTests.swift */; };
+		26916B5D26CB586E00AC9436 /* MonzoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B5C26CB586E00AC9436 /* MonzoUITests.swift */; };
+		26916C3526CB640300AC9436 /* KNGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C1626CB640300AC9436 /* KNGeneral.swift */; };
+		26916C3726CB640300AC9436 /* KNView+KNController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C1826CB640300AC9436 /* KNView+KNController.swift */; };
+		26916C3926CB640300AC9436 /* KNConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C1A26CB640300AC9436 /* KNConstraints.swift */; };
+		26916C7B26CB65E800AC9436 /* KNControlConstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C7A26CB65E800AC9436 /* KNControlConstruction.swift */; };
+		26916C7F26CB662100AC9436 /* Fonts+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C7E26CB662100AC9436 /* Fonts+Colors.swift */; };
+		26916C8226CB669100AC9436 /* KNUIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C8026CB669100AC9436 /* KNUIButtonExtension.swift */; };
+		26916C8326CB669100AC9436 /* KNUIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C8126CB669100AC9436 /* KNUIColorExtension.swift */; };
+		26916C8726CB8D3800AC9436 /* MZBaseKycController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C8626CB8D3800AC9436 /* MZBaseKycController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26916B4E26CB586E00AC9436 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26916B2F26CB586000AC9436 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26916B3626CB586000AC9436;
+			remoteInfo = Monzo;
+		};
+		26916B5926CB586E00AC9436 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26916B2F26CB586000AC9436 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26916B3626CB586000AC9436;
+			remoteInfo = Monzo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26916B3726CB586000AC9436 /* Monzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26916B3A26CB586000AC9436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		26916B3C26CB586000AC9436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		26916B3E26CB586000AC9436 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		26916B4126CB586000AC9436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26916B4326CB586D00AC9436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26916B4626CB586D00AC9436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		26916B4826CB586D00AC9436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26916B4D26CB586E00AC9436 /* MonzoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonzoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26916B5126CB586E00AC9436 /* MonzoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonzoTests.swift; sourceTree = "<group>"; };
+		26916B5326CB586E00AC9436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26916B5826CB586E00AC9436 /* MonzoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonzoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26916B5C26CB586E00AC9436 /* MonzoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonzoUITests.swift; sourceTree = "<group>"; };
+		26916B5E26CB586E00AC9436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26916C1626CB640300AC9436 /* KNGeneral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNGeneral.swift; sourceTree = "<group>"; };
+		26916C1826CB640300AC9436 /* KNView+KNController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KNView+KNController.swift"; sourceTree = "<group>"; };
+		26916C1A26CB640300AC9436 /* KNConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNConstraints.swift; sourceTree = "<group>"; };
+		26916C7A26CB65E800AC9436 /* KNControlConstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNControlConstruction.swift; sourceTree = "<group>"; };
+		26916C7E26CB662100AC9436 /* Fonts+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Colors.swift"; sourceTree = "<group>"; };
+		26916C8026CB669100AC9436 /* KNUIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIButtonExtension.swift; sourceTree = "<group>"; };
+		26916C8126CB669100AC9436 /* KNUIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIColorExtension.swift; sourceTree = "<group>"; };
+		26916C8626CB8D3800AC9436 /* MZBaseKycController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZBaseKycController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26916B3426CB586000AC9436 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26916B4A26CB586E00AC9436 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26916B5526CB586E00AC9436 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26916B2E26CB586000AC9436 = {
+			isa = PBXGroup;
+			children = (
+				26916B3926CB586000AC9436 /* Monzo */,
+				26916B5026CB586E00AC9436 /* MonzoTests */,
+				26916B5B26CB586E00AC9436 /* MonzoUITests */,
+				26916B3826CB586000AC9436 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26916B3826CB586000AC9436 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26916B3726CB586000AC9436 /* Monzo.app */,
+				26916B4D26CB586E00AC9436 /* MonzoTests.xctest */,
+				26916B5826CB586E00AC9436 /* MonzoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26916B3926CB586000AC9436 /* Monzo */ = {
+			isa = PBXGroup;
+			children = (
+				26916C8426CB8D0A00AC9436 /* Features */,
+				26916BF826CB640300AC9436 /* Kits */,
+				26916B3A26CB586000AC9436 /* AppDelegate.swift */,
+				26916B3C26CB586000AC9436 /* SceneDelegate.swift */,
+				26916B3E26CB586000AC9436 /* ViewController.swift */,
+				26916B4026CB586000AC9436 /* Main.storyboard */,
+				26916B4326CB586D00AC9436 /* Assets.xcassets */,
+				26916B4526CB586D00AC9436 /* LaunchScreen.storyboard */,
+				26916B4826CB586D00AC9436 /* Info.plist */,
+			);
+			path = Monzo;
+			sourceTree = "<group>";
+		};
+		26916B5026CB586E00AC9436 /* MonzoTests */ = {
+			isa = PBXGroup;
+			children = (
+				26916B5126CB586E00AC9436 /* MonzoTests.swift */,
+				26916B5326CB586E00AC9436 /* Info.plist */,
+			);
+			path = MonzoTests;
+			sourceTree = "<group>";
+		};
+		26916B5B26CB586E00AC9436 /* MonzoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				26916B5C26CB586E00AC9436 /* MonzoUITests.swift */,
+				26916B5E26CB586E00AC9436 /* Info.plist */,
+			);
+			path = MonzoUITests;
+			sourceTree = "<group>";
+		};
+		26916BF826CB640300AC9436 /* Kits */ = {
+			isa = PBXGroup;
+			children = (
+				26916C8026CB669100AC9436 /* KNUIButtonExtension.swift */,
+				26916C8126CB669100AC9436 /* KNUIColorExtension.swift */,
+				26916C7A26CB65E800AC9436 /* KNControlConstruction.swift */,
+				26916C1A26CB640300AC9436 /* KNConstraints.swift */,
+				26916C1626CB640300AC9436 /* KNGeneral.swift */,
+				26916C7E26CB662100AC9436 /* Fonts+Colors.swift */,
+				26916C1826CB640300AC9436 /* KNView+KNController.swift */,
+			);
+			path = Kits;
+			sourceTree = "<group>";
+		};
+		26916C8426CB8D0A00AC9436 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				26916C8526CB8D1E00AC9436 /* KYC */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		26916C8526CB8D1E00AC9436 /* KYC */ = {
+			isa = PBXGroup;
+			children = (
+				26916C8626CB8D3800AC9436 /* MZBaseKycController.swift */,
+			);
+			path = KYC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26916B3626CB586000AC9436 /* Monzo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26916B6126CB586E00AC9436 /* Build configuration list for PBXNativeTarget "Monzo" */;
+			buildPhases = (
+				26916B3326CB586000AC9436 /* Sources */,
+				26916B3426CB586000AC9436 /* Frameworks */,
+				26916B3526CB586000AC9436 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Monzo;
+			productName = Monzo;
+			productReference = 26916B3726CB586000AC9436 /* Monzo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26916B4C26CB586E00AC9436 /* MonzoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26916B6426CB586E00AC9436 /* Build configuration list for PBXNativeTarget "MonzoTests" */;
+			buildPhases = (
+				26916B4926CB586E00AC9436 /* Sources */,
+				26916B4A26CB586E00AC9436 /* Frameworks */,
+				26916B4B26CB586E00AC9436 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26916B4F26CB586E00AC9436 /* PBXTargetDependency */,
+			);
+			name = MonzoTests;
+			productName = MonzoTests;
+			productReference = 26916B4D26CB586E00AC9436 /* MonzoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		26916B5726CB586E00AC9436 /* MonzoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26916B6726CB586E00AC9436 /* Build configuration list for PBXNativeTarget "MonzoUITests" */;
+			buildPhases = (
+				26916B5426CB586E00AC9436 /* Sources */,
+				26916B5526CB586E00AC9436 /* Frameworks */,
+				26916B5626CB586E00AC9436 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26916B5A26CB586E00AC9436 /* PBXTargetDependency */,
+			);
+			name = MonzoUITests;
+			productName = MonzoUITests;
+			productReference = 26916B5826CB586E00AC9436 /* MonzoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26916B2F26CB586000AC9436 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					26916B3626CB586000AC9436 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					26916B4C26CB586E00AC9436 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 26916B3626CB586000AC9436;
+					};
+					26916B5726CB586E00AC9436 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 26916B3626CB586000AC9436;
+					};
+				};
+			};
+			buildConfigurationList = 26916B3226CB586000AC9436 /* Build configuration list for PBXProject "Monzo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26916B2E26CB586000AC9436;
+			productRefGroup = 26916B3826CB586000AC9436 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26916B3626CB586000AC9436 /* Monzo */,
+				26916B4C26CB586E00AC9436 /* MonzoTests */,
+				26916B5726CB586E00AC9436 /* MonzoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26916B3526CB586000AC9436 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26916B4726CB586D00AC9436 /* LaunchScreen.storyboard in Resources */,
+				26916B4426CB586D00AC9436 /* Assets.xcassets in Resources */,
+				26916B4226CB586000AC9436 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26916B4B26CB586E00AC9436 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26916B5626CB586E00AC9436 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26916B3326CB586000AC9436 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26916B3F26CB586000AC9436 /* ViewController.swift in Sources */,
+				26916B3B26CB586000AC9436 /* AppDelegate.swift in Sources */,
+				26916C3526CB640300AC9436 /* KNGeneral.swift in Sources */,
+				26916C8726CB8D3800AC9436 /* MZBaseKycController.swift in Sources */,
+				26916C7B26CB65E800AC9436 /* KNControlConstruction.swift in Sources */,
+				26916C7F26CB662100AC9436 /* Fonts+Colors.swift in Sources */,
+				26916B3D26CB586000AC9436 /* SceneDelegate.swift in Sources */,
+				26916C8326CB669100AC9436 /* KNUIColorExtension.swift in Sources */,
+				26916C3726CB640300AC9436 /* KNView+KNController.swift in Sources */,
+				26916C3926CB640300AC9436 /* KNConstraints.swift in Sources */,
+				26916C8226CB669100AC9436 /* KNUIButtonExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26916B4926CB586E00AC9436 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26916B5226CB586E00AC9436 /* MonzoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26916B5426CB586E00AC9436 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26916B5D26CB586E00AC9436 /* MonzoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26916B4F26CB586E00AC9436 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26916B3626CB586000AC9436 /* Monzo */;
+			targetProxy = 26916B4E26CB586E00AC9436 /* PBXContainerItemProxy */;
+		};
+		26916B5A26CB586E00AC9436 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26916B3626CB586000AC9436 /* Monzo */;
+			targetProxy = 26916B5926CB586E00AC9436 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		26916B4026CB586000AC9436 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26916B4126CB586000AC9436 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		26916B4526CB586D00AC9436 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26916B4626CB586D00AC9436 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26916B5F26CB586E00AC9436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		26916B6026CB586E00AC9436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26916B6226CB586E00AC9436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM62LBZ4XN;
+				INFOPLIST_FILE = Monzo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kynguyen.Monzo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26916B6326CB586E00AC9436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM62LBZ4XN;
+				INFOPLIST_FILE = Monzo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kynguyen.Monzo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		26916B6526CB586E00AC9436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM62LBZ4XN;
+				INFOPLIST_FILE = MonzoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kynguyen.MonzoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monzo.app/Monzo";
+			};
+			name = Debug;
+		};
+		26916B6626CB586E00AC9436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM62LBZ4XN;
+				INFOPLIST_FILE = MonzoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kynguyen.MonzoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monzo.app/Monzo";
+			};
+			name = Release;
+		};
+		26916B6826CB586E00AC9436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM62LBZ4XN;
+				INFOPLIST_FILE = MonzoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kynguyen.MonzoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Monzo;
+			};
+			name = Debug;
+		};
+		26916B6926CB586E00AC9436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM62LBZ4XN;
+				INFOPLIST_FILE = MonzoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kynguyen.MonzoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Monzo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26916B3226CB586000AC9436 /* Build configuration list for PBXProject "Monzo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26916B5F26CB586E00AC9436 /* Debug */,
+				26916B6026CB586E00AC9436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26916B6126CB586E00AC9436 /* Build configuration list for PBXNativeTarget "Monzo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26916B6226CB586E00AC9436 /* Debug */,
+				26916B6326CB586E00AC9436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26916B6426CB586E00AC9436 /* Build configuration list for PBXNativeTarget "MonzoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26916B6526CB586E00AC9436 /* Debug */,
+				26916B6626CB586E00AC9436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26916B6726CB586E00AC9436 /* Build configuration list for PBXNativeTarget "MonzoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26916B6826CB586E00AC9436 /* Debug */,
+				26916B6926CB586E00AC9436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26916B2F26CB586000AC9436 /* Project object */;
+}
