@@ -24,42 +24,37 @@ class MZBaseKycController: KNController {
         formatNavigationBar()
         addTitleToHeader()
         addFooterWithButton()
-        
-        sectionLabel.text = "ABOUT YOU"
-        titleLabel.text = "Are you a British citizen?"
-        titleDescritionLabel.text = "You usually are if you or our parents were born in the UK or you moved to the UK and successfully applied for citizenship"
     }
-    
 }
 
 // MARK: - Component Builders
 extension MZBaseKycController {
     func addFooterWithButton() {
         let bottomSpace = (UIScreen.bottomSpace > 0 ? UIScreen.bottomSpace : 0) + 16
-        
+
         footerView.addSubviews(views: nextButton)
         nextButton.horizontalSuperview(space: 16)
         nextButton.topToSuperview(space: 16)
         nextButton.bottomToSuperview(space: -bottomSpace)
-        
+
         view.addSubviews(views: footerView)
         footerView.horizontalSuperview()
         footerView.bottomToSuperview()
     }
-    
+
     func addTitleToHeader() {
-        
+
         headerView.addArrangeViews(views: sectionLabel, titleLabel, titleDescritionLabel)
         view.addSubviews(views: headerView)
         headerView.horizontalSuperview(space: 16)
         headerView.topToSuperviewSafeArea()
     }
-    
+
     func formatNavigationBar() {
         navigationController?.navigationBar.barTintColor = .bg
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
     }
-    
+
 }
