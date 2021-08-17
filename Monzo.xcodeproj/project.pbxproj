@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2659A3A826CC525B0001BB93 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2659A3A426CC525B0001BB93 /* SF-Pro-Text-Bold.otf */; };
+		2659A3A926CC525B0001BB93 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2659A3A526CC525B0001BB93 /* SF-Pro-Text-Medium.otf */; };
+		2659A3AA26CC525B0001BB93 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2659A3A626CC525B0001BB93 /* SF-Pro-Text-Semibold.otf */; };
+		2659A3AB26CC525B0001BB93 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2659A3A726CC525B0001BB93 /* SF-Pro-Text-Regular.otf */; };
+		2659A3AD26CC56AE0001BB93 /* KNTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659A3AC26CC56AE0001BB93 /* KNTableExtension.swift */; };
+		2659A3AF26CC67330001BB93 /* MZBaseListKycController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659A3AE26CC67330001BB93 /* MZBaseListKycController.swift */; };
+		2659A3B126CC67800001BB93 /* MZKycListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659A3B026CC67800001BB93 /* MZKycListView.swift */; };
+		2659A3B326CC6A060001BB93 /* MZTextKycController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659A3B226CC6A060001BB93 /* MZTextKycController.swift */; };
+		2659A3B526CC6D660001BB93 /* KNUITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659A3B426CC6D660001BB93 /* KNUITextFieldExtension.swift */; };
 		26916B3B26CB586000AC9436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B3A26CB586000AC9436 /* AppDelegate.swift */; };
 		26916B3D26CB586000AC9436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B3C26CB586000AC9436 /* SceneDelegate.swift */; };
 		26916B3F26CB586000AC9436 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B3E26CB586000AC9436 /* ViewController.swift */; };
@@ -43,6 +52,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2659A3A426CC525B0001BB93 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		2659A3A526CC525B0001BB93 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		2659A3A626CC525B0001BB93 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		2659A3A726CC525B0001BB93 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		2659A3AC26CC56AE0001BB93 /* KNTableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNTableExtension.swift; sourceTree = "<group>"; };
+		2659A3AE26CC67330001BB93 /* MZBaseListKycController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZBaseListKycController.swift; sourceTree = "<group>"; };
+		2659A3B026CC67800001BB93 /* MZKycListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZKycListView.swift; sourceTree = "<group>"; };
+		2659A3B226CC6A060001BB93 /* MZTextKycController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZTextKycController.swift; sourceTree = "<group>"; };
+		2659A3B426CC6D660001BB93 /* KNUITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUITextFieldExtension.swift; sourceTree = "<group>"; };
 		26916B3726CB586000AC9436 /* Monzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26916B3A26CB586000AC9436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26916B3C26CB586000AC9436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +110,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2659A3A226CC52430001BB93 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2659A3A326CC52500001BB93 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2659A3A326CC52500001BB93 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2659A3A426CC525B0001BB93 /* SF-Pro-Text-Bold.otf */,
+				2659A3A526CC525B0001BB93 /* SF-Pro-Text-Medium.otf */,
+				2659A3A726CC525B0001BB93 /* SF-Pro-Text-Regular.otf */,
+				2659A3A626CC525B0001BB93 /* SF-Pro-Text-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		26916B2E26CB586000AC9436 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +152,7 @@
 		26916B3926CB586000AC9436 /* Monzo */ = {
 			isa = PBXGroup;
 			children = (
+				2659A3A226CC52430001BB93 /* Resources */,
 				26916C8426CB8D0A00AC9436 /* Features */,
 				26916BF826CB640300AC9436 /* Kits */,
 				26916B3A26CB586000AC9436 /* AppDelegate.swift */,
@@ -153,8 +191,10 @@
 				26916C8126CB669100AC9436 /* KNUIColorExtension.swift */,
 				26916C7A26CB65E800AC9436 /* KNControlConstruction.swift */,
 				26916C1A26CB640300AC9436 /* KNConstraints.swift */,
+				2659A3B426CC6D660001BB93 /* KNUITextFieldExtension.swift */,
 				26916C1626CB640300AC9436 /* KNGeneral.swift */,
 				26916C7E26CB662100AC9436 /* Fonts+Colors.swift */,
+				2659A3AC26CC56AE0001BB93 /* KNTableExtension.swift */,
 				26916C1826CB640300AC9436 /* KNView+KNController.swift */,
 			);
 			path = Kits;
@@ -172,6 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				26916C8626CB8D3800AC9436 /* MZBaseKycController.swift */,
+				2659A3B026CC67800001BB93 /* MZKycListView.swift */,
+				2659A3AE26CC67330001BB93 /* MZBaseListKycController.swift */,
+				2659A3B226CC6A060001BB93 /* MZTextKycController.swift */,
 			);
 			path = KYC;
 			sourceTree = "<group>";
@@ -279,9 +322,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2659A3AA26CC525B0001BB93 /* SF-Pro-Text-Semibold.otf in Resources */,
 				26916B4726CB586D00AC9436 /* LaunchScreen.storyboard in Resources */,
 				26916B4426CB586D00AC9436 /* Assets.xcassets in Resources */,
+				2659A3A826CC525B0001BB93 /* SF-Pro-Text-Bold.otf in Resources */,
+				2659A3A926CC525B0001BB93 /* SF-Pro-Text-Medium.otf in Resources */,
 				26916B4226CB586000AC9436 /* Main.storyboard in Resources */,
+				2659A3AB26CC525B0001BB93 /* SF-Pro-Text-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,12 +354,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				26916B3F26CB586000AC9436 /* ViewController.swift in Sources */,
+				2659A3AF26CC67330001BB93 /* MZBaseListKycController.swift in Sources */,
 				26916B3B26CB586000AC9436 /* AppDelegate.swift in Sources */,
 				26916C3526CB640300AC9436 /* KNGeneral.swift in Sources */,
+				2659A3B526CC6D660001BB93 /* KNUITextFieldExtension.swift in Sources */,
 				26916C8726CB8D3800AC9436 /* MZBaseKycController.swift in Sources */,
+				2659A3B326CC6A060001BB93 /* MZTextKycController.swift in Sources */,
 				26916C7B26CB65E800AC9436 /* KNControlConstruction.swift in Sources */,
 				26916C7F26CB662100AC9436 /* Fonts+Colors.swift in Sources */,
+				2659A3B126CC67800001BB93 /* MZKycListView.swift in Sources */,
 				26916B3D26CB586000AC9436 /* SceneDelegate.swift in Sources */,
+				2659A3AD26CC56AE0001BB93 /* KNTableExtension.swift in Sources */,
 				26916C8326CB669100AC9436 /* KNUIColorExtension.swift in Sources */,
 				26916C3726CB640300AC9436 /* KNView+KNController.swift in Sources */,
 				26916C3926CB640300AC9436 /* KNConstraints.swift in Sources */,
