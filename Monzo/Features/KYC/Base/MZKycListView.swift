@@ -2,18 +2,20 @@
 
 import UIKit
 
-struct MZKycListViewModel {
+struct MZKycListItemModel {
     var key: String
     var title: String
     var isSelected: Bool = false
 }
 
 class MZKycListView: KNView {
-    private var datasource = [MZKycListViewModel]() {
+    private var datasource = [MZKycListItemModel]() {
         didSet {
             tableView.reloadData()
         }
     }
+    var selectAction: (([MZKycListItemModel]) -> Void)?
+    var isMultiChoice = false
     lazy var tableView = UITableView(cells: [MZKycListItemCell.self], source: self)
     private var tableViewBottomConstraint: NSLayoutConstraint?
     private var tableViewHeightConstraint: NSLayoutConstraint?
@@ -33,7 +35,7 @@ class MZKycListView: KNView {
     }
     
     func setData(stringArrays: [String]) {
-        datasource = stringArrays.map { MZKycListViewModel(key: $0, title: $0)}
+        datasource = stringArrays.map { MZKycListItemModel(key: $0, title: $0)}
     }
     
     override func layoutSubviews() {
@@ -71,13 +73,21 @@ extension MZKycListView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! MZKycListItemCell
+        if !isMultiChoice {
+            for i in 0 ..< datasource.count where datasource[i].isSelected {
+                datasource[i].isSelected = false
+            }
+        }
         datasource[indexPath.row].isSelected = !datasource[indexPath.row].isSelected
         cell.isSelected = datasource[indexPath.row].isSelected
+        
+        let selectedItems = datasource.filter { $0.isSelected }
+        selectAction?(selectedItems)
     }
 }
 
 class MZKycListItemCell: KNTableCell {
-    let titleLabel = UILabel(font: .main(size: 15), color: .white)
+    let titleLabel = UILabel(font: .main(size: 15), color: .white, numberOfLines: 2)
     let checkIcon = UIImageView(imageName: "check")
     let notCheckIcon = UIView(background: .clear)
     
@@ -98,6 +108,7 @@ class MZKycListItemCell: KNTableCell {
         
         contentView.addSubviews(views: titleLabel)
         titleLabel.leftToSuperview(space: 16)
+        titleLabel.width(UIScreen.main.bounds.width / 1.5)
         titleLabel.centerYToSuperview()
         
         contentView.addSubviews(views: checkIcon)
@@ -111,7 +122,7 @@ class MZKycListItemCell: KNTableCell {
         notCheckIcon.fill(toView: checkIcon)
     }
     
-    func setData(_ data: MZKycListViewModel) {
+    func setData(_ data: MZKycListItemModel) {
         titleLabel.text = data.title
         isSelected = data.isSelected
     }

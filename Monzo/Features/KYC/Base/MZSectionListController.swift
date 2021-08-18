@@ -70,7 +70,7 @@ class MZSectionListController: MZBaseKycController {
     }
     
     func setSectionData() {
-        let about = SectionModel(iconName: "about_you_section", title: "About you", description: "Your citizenship and employment status", isChecked: true)
+        let about = SectionModel(iconName: "about_you_section", title: "About you", description: "Your citizenship and employment status")
         let aboutSection = SectionView(section: about)
         sectionStackView.addArrangeViews(views: aboutSection)
         

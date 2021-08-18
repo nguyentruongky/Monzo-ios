@@ -34,6 +34,13 @@
 		26916C8226CB669100AC9436 /* KNUIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C8026CB669100AC9436 /* KNUIButtonExtension.swift */; };
 		26916C8326CB669100AC9436 /* KNUIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C8126CB669100AC9436 /* KNUIColorExtension.swift */; };
 		26916C8726CB8D3800AC9436 /* MZBaseKycController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C8626CB8D3800AC9436 /* MZBaseKycController.swift */; };
+		26EBBBC126CCFC54003D878E /* 1.MZAboutCitizenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBC026CCFC54003D878E /* 1.MZAboutCitizenController.swift */; };
+		26EBBBC326CCFD6B003D878E /* 2.MZAboutPrimaryCitizenshipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBC226CCFD6B003D878E /* 2.MZAboutPrimaryCitizenshipController.swift */; };
+		26EBBBC726CD0411003D878E /* 3.MZAboutRightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBC626CD0411003D878E /* 3.MZAboutRightController.swift */; };
+		26EBBBC926CD04BD003D878E /* 4.MZAboutRightExpirationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBC826CD04BD003D878E /* 4.MZAboutRightExpirationController.swift */; };
+		26EBBBCB26CD0735003D878E /* 5.MZAboutEmploymentStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBCA26CD0735003D878E /* 5.MZAboutEmploymentStatusController.swift */; };
+		26EBBBCD26CD0A42003D878E /* 6.MZAboutIncomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBCC26CD0A42003D878E /* 6.MZAboutIncomeController.swift */; };
+		26EBBBCF26CD0AC0003D878E /* 0.MZAboutLandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBCE26CD0AC0003D878E /* 0.MZAboutLandingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +94,13 @@
 		26916C8026CB669100AC9436 /* KNUIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIButtonExtension.swift; sourceTree = "<group>"; };
 		26916C8126CB669100AC9436 /* KNUIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIColorExtension.swift; sourceTree = "<group>"; };
 		26916C8626CB8D3800AC9436 /* MZBaseKycController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZBaseKycController.swift; sourceTree = "<group>"; };
+		26EBBBC026CCFC54003D878E /* 1.MZAboutCitizenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.MZAboutCitizenController.swift; sourceTree = "<group>"; };
+		26EBBBC226CCFD6B003D878E /* 2.MZAboutPrimaryCitizenshipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.MZAboutPrimaryCitizenshipController.swift; sourceTree = "<group>"; };
+		26EBBBC626CD0411003D878E /* 3.MZAboutRightController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.MZAboutRightController.swift; sourceTree = "<group>"; };
+		26EBBBC826CD04BD003D878E /* 4.MZAboutRightExpirationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.MZAboutRightExpirationController.swift; sourceTree = "<group>"; };
+		26EBBBCA26CD0735003D878E /* 5.MZAboutEmploymentStatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5.MZAboutEmploymentStatusController.swift; sourceTree = "<group>"; };
+		26EBBBCC26CD0A42003D878E /* 6.MZAboutIncomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6.MZAboutIncomeController.swift; sourceTree = "<group>"; };
+		26EBBBCE26CD0AC0003D878E /* 0.MZAboutLandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 0.MZAboutLandingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +229,29 @@
 		26916C8526CB8D1E00AC9436 /* KYC */ = {
 			isa = PBXGroup;
 			children = (
+				26EBBBC526CD03AE003D878E /* Base */,
+				26EBBBC426CD0395003D878E /* About */,
+			);
+			path = KYC;
+			sourceTree = "<group>";
+		};
+		26EBBBC426CD0395003D878E /* About */ = {
+			isa = PBXGroup;
+			children = (
+				26EBBBCE26CD0AC0003D878E /* 0.MZAboutLandingController.swift */,
+				26EBBBC026CCFC54003D878E /* 1.MZAboutCitizenController.swift */,
+				26EBBBC226CCFD6B003D878E /* 2.MZAboutPrimaryCitizenshipController.swift */,
+				26EBBBC626CD0411003D878E /* 3.MZAboutRightController.swift */,
+				26EBBBC826CD04BD003D878E /* 4.MZAboutRightExpirationController.swift */,
+				26EBBBCA26CD0735003D878E /* 5.MZAboutEmploymentStatusController.swift */,
+				26EBBBCC26CD0A42003D878E /* 6.MZAboutIncomeController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		26EBBBC526CD03AE003D878E /* Base */ = {
+			isa = PBXGroup;
+			children = (
 				26916C8626CB8D3800AC9436 /* MZBaseKycController.swift */,
 				2659A3B026CC67800001BB93 /* MZKycListView.swift */,
 				2659A3AE26CC67330001BB93 /* MZBaseListKycController.swift */,
@@ -222,7 +259,7 @@
 				2659A3B626CC6EA80001BB93 /* MZKycLandingController.swift */,
 				2659A3B826CC71D20001BB93 /* MZSectionListController.swift */,
 			);
-			path = KYC;
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,7 +397,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				26916B3F26CB586000AC9436 /* ViewController.swift in Sources */,
+				26EBBBC126CCFC54003D878E /* 1.MZAboutCitizenController.swift in Sources */,
 				2659A3AF26CC67330001BB93 /* MZBaseListKycController.swift in Sources */,
+				26EBBBC926CD04BD003D878E /* 4.MZAboutRightExpirationController.swift in Sources */,
 				26916B3B26CB586000AC9436 /* AppDelegate.swift in Sources */,
 				26916C3526CB640300AC9436 /* KNGeneral.swift in Sources */,
 				2659A3B526CC6D660001BB93 /* KNUITextFieldExtension.swift in Sources */,
@@ -372,7 +411,12 @@
 				2659A3B726CC6EA80001BB93 /* MZKycLandingController.swift in Sources */,
 				2659A3B126CC67800001BB93 /* MZKycListView.swift in Sources */,
 				26916B3D26CB586000AC9436 /* SceneDelegate.swift in Sources */,
+				26EBBBC326CCFD6B003D878E /* 2.MZAboutPrimaryCitizenshipController.swift in Sources */,
+				26EBBBC726CD0411003D878E /* 3.MZAboutRightController.swift in Sources */,
+				26EBBBCD26CD0A42003D878E /* 6.MZAboutIncomeController.swift in Sources */,
+				26EBBBCB26CD0735003D878E /* 5.MZAboutEmploymentStatusController.swift in Sources */,
 				2659A3AD26CC56AE0001BB93 /* KNTableExtension.swift in Sources */,
+				26EBBBCF26CD0AC0003D878E /* 0.MZAboutLandingController.swift in Sources */,
 				26916C8326CB669100AC9436 /* KNUIColorExtension.swift in Sources */,
 				26916C3726CB640300AC9436 /* KNView+KNController.swift in Sources */,
 				26916C3926CB640300AC9436 /* KNConstraints.swift in Sources */,
