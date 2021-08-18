@@ -16,6 +16,8 @@
 		2659A3B126CC67800001BB93 /* MZKycListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659A3B026CC67800001BB93 /* MZKycListView.swift */; };
 		2659A3B326CC6A060001BB93 /* MZTextKycController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659A3B226CC6A060001BB93 /* MZTextKycController.swift */; };
 		2659A3B526CC6D660001BB93 /* KNUITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659A3B426CC6D660001BB93 /* KNUITextFieldExtension.swift */; };
+		2659A3B726CC6EA80001BB93 /* MZKycLandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659A3B626CC6EA80001BB93 /* MZKycLandingController.swift */; };
+		2659A3B926CC71D20001BB93 /* MZSectionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659A3B826CC71D20001BB93 /* MZSectionListController.swift */; };
 		26916B3B26CB586000AC9436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B3A26CB586000AC9436 /* AppDelegate.swift */; };
 		26916B3D26CB586000AC9436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B3C26CB586000AC9436 /* SceneDelegate.swift */; };
 		26916B3F26CB586000AC9436 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B3E26CB586000AC9436 /* ViewController.swift */; };
@@ -61,6 +63,8 @@
 		2659A3B026CC67800001BB93 /* MZKycListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZKycListView.swift; sourceTree = "<group>"; };
 		2659A3B226CC6A060001BB93 /* MZTextKycController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZTextKycController.swift; sourceTree = "<group>"; };
 		2659A3B426CC6D660001BB93 /* KNUITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUITextFieldExtension.swift; sourceTree = "<group>"; };
+		2659A3B626CC6EA80001BB93 /* MZKycLandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZKycLandingController.swift; sourceTree = "<group>"; };
+		2659A3B826CC71D20001BB93 /* MZSectionListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZSectionListController.swift; sourceTree = "<group>"; };
 		26916B3726CB586000AC9436 /* Monzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26916B3A26CB586000AC9436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26916B3C26CB586000AC9436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 				2659A3B026CC67800001BB93 /* MZKycListView.swift */,
 				2659A3AE26CC67330001BB93 /* MZBaseListKycController.swift */,
 				2659A3B226CC6A060001BB93 /* MZTextKycController.swift */,
+				2659A3B626CC6EA80001BB93 /* MZKycLandingController.swift */,
+				2659A3B826CC71D20001BB93 /* MZSectionListController.swift */,
 			);
 			path = KYC;
 			sourceTree = "<group>";
@@ -359,9 +365,11 @@
 				26916C3526CB640300AC9436 /* KNGeneral.swift in Sources */,
 				2659A3B526CC6D660001BB93 /* KNUITextFieldExtension.swift in Sources */,
 				26916C8726CB8D3800AC9436 /* MZBaseKycController.swift in Sources */,
+				2659A3B926CC71D20001BB93 /* MZSectionListController.swift in Sources */,
 				2659A3B326CC6A060001BB93 /* MZTextKycController.swift in Sources */,
 				26916C7B26CB65E800AC9436 /* KNControlConstruction.swift in Sources */,
 				26916C7F26CB662100AC9436 /* Fonts+Colors.swift in Sources */,
+				2659A3B726CC6EA80001BB93 /* MZKycLandingController.swift in Sources */,
 				2659A3B126CC67800001BB93 /* MZKycListView.swift in Sources */,
 				26916B3D26CB586000AC9436 /* SceneDelegate.swift in Sources */,
 				2659A3AD26CC56AE0001BB93 /* KNTableExtension.swift in Sources */,
