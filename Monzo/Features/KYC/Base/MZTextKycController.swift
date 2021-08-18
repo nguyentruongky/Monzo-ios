@@ -7,6 +7,7 @@ class MZTextKycController: MZBaseKycController {
     
     override func setupView() {
         super.setupView()
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
         addCurrencyTextField()
     }
     

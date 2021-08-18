@@ -3,14 +3,21 @@
 import UIKit
 
 class MZSectionListController: MZBaseKycController {
+    var descriptionText: String {
+        "Each section should only take a couple of minutes to complete"
+    }
+    
+    var finishSteps: [String: Bool] {
+        [:]
+    }
+
     let sectionStackView = UIStackView(axis: .vertical, distributon: .fill, alignment: .fill, space: 16)
     override func setupView() {
         super.setupView()
         
         // Header
         headerView.removeFromSuperview()
-        let description = "Each section should only take a couple of minutes to complete"
-        let descriptionLabel = UILabel(text: description,
+        let descriptionLabel = UILabel(text: descriptionText,
                                        font: .main(size: 14),
                                        color: .white,
                                        numberOfLines: 0,
@@ -70,22 +77,37 @@ class MZSectionListController: MZBaseKycController {
     }
     
     func setSectionData() {
-        let about = SectionModel(iconName: "about_you_section", title: "About you", description: "Your citizenship and employment status")
+        let about = SectionModel(
+            iconName: "about_you_section",
+            title: "About you",
+            description: "Your citizenship and employment status",
+            isChecked: finishSteps["about"] ?? false)
         let aboutSection = SectionView(section: about)
         sectionStackView.addArrangeViews(views: aboutSection)
         
-        let finances = SectionModel(iconName: "finance_section", title: "Your finances", description: "Your income and committed spending")
+        let finances = SectionModel(
+            iconName: "finance_section",
+            title: "Your finances",
+            description: "Your income and committed spending",
+            isChecked: finishSteps["finances"] ?? false)
         let financeSection = SectionView(section: finances)
         sectionStackView.addArrangeViews(views: financeSection)
         
-        let account = SectionModel(iconName: "account_section", title: "Your account", description: "How you plan to use your Monzo account")
+        let account = SectionModel(
+            iconName: "account_section",
+            title: "Your account",
+            description: "How you plan to use your Monzo account",
+            isChecked: finishSteps["account"] ?? false)
         let accountSection = SectionView(section: account)
         sectionStackView.addArrangeViews(views: accountSection)
         
-        let identity = SectionModel(iconName: "identity_section", title: "Your identity", description: "Checking to make sure you and your ID match")
+        let identity = SectionModel(
+            iconName: "identity_section",
+            title: "Your identity",
+            description: "Checking to make sure you and your ID match",
+            isChecked: finishSteps["identity"] ?? false)
         let identitySection = SectionView(section: identity)
         sectionStackView.addArrangeViews(views: identitySection)
-
     }
 }
 

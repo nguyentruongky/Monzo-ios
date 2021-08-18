@@ -41,6 +41,13 @@
 		26EBBBCB26CD0735003D878E /* 5.MZAboutEmploymentStatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBCA26CD0735003D878E /* 5.MZAboutEmploymentStatusController.swift */; };
 		26EBBBCD26CD0A42003D878E /* 6.MZAboutIncomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBCC26CD0A42003D878E /* 6.MZAboutIncomeController.swift */; };
 		26EBBBCF26CD0AC0003D878E /* 0.MZAboutLandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBCE26CD0AC0003D878E /* 0.MZAboutLandingController.swift */; };
+		26EBBBD226CD0B3C003D878E /* 0.MZFinancesLandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBD126CD0B3C003D878E /* 0.MZFinancesLandingController.swift */; };
+		26EBBBD426CD0CE5003D878E /* 1.MZFinancesIncomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBD326CD0CE5003D878E /* 1.MZFinancesIncomeController.swift */; };
+		26EBBBD626CD0EA8003D878E /* 2.MZFinancesIncomeDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBD526CD0EA8003D878E /* 2.MZFinancesIncomeDownController.swift */; };
+		26EBBBD826CD0F16003D878E /* 3.MZFinancesHousingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBD726CD0F16003D878E /* 3.MZFinancesHousingController.swift */; };
+		26EBBBDA26CD0F71003D878E /* 4.MZFinancesRentingSpendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBD926CD0F71003D878E /* 4.MZFinancesRentingSpendController.swift */; };
+		26EBBBDC26CD0FAD003D878E /* 5.MZFinancesRelyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBDB26CD0FAD003D878E /* 5.MZFinancesRelyController.swift */; };
+		26EBBBDE26CD1009003D878E /* 6.MZFinancesRelyCountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBDD26CD1009003D878E /* 6.MZFinancesRelyCountController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +108,13 @@
 		26EBBBCA26CD0735003D878E /* 5.MZAboutEmploymentStatusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5.MZAboutEmploymentStatusController.swift; sourceTree = "<group>"; };
 		26EBBBCC26CD0A42003D878E /* 6.MZAboutIncomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6.MZAboutIncomeController.swift; sourceTree = "<group>"; };
 		26EBBBCE26CD0AC0003D878E /* 0.MZAboutLandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 0.MZAboutLandingController.swift; sourceTree = "<group>"; };
+		26EBBBD126CD0B3C003D878E /* 0.MZFinancesLandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 0.MZFinancesLandingController.swift; sourceTree = "<group>"; };
+		26EBBBD326CD0CE5003D878E /* 1.MZFinancesIncomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.MZFinancesIncomeController.swift; sourceTree = "<group>"; };
+		26EBBBD526CD0EA8003D878E /* 2.MZFinancesIncomeDownController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.MZFinancesIncomeDownController.swift; sourceTree = "<group>"; };
+		26EBBBD726CD0F16003D878E /* 3.MZFinancesHousingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.MZFinancesHousingController.swift; sourceTree = "<group>"; };
+		26EBBBD926CD0F71003D878E /* 4.MZFinancesRentingSpendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.MZFinancesRentingSpendController.swift; sourceTree = "<group>"; };
+		26EBBBDB26CD0FAD003D878E /* 5.MZFinancesRelyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5.MZFinancesRelyController.swift; sourceTree = "<group>"; };
+		26EBBBDD26CD1009003D878E /* 6.MZFinancesRelyCountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6.MZFinancesRelyCountController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +245,7 @@
 			children = (
 				26EBBBC526CD03AE003D878E /* Base */,
 				26EBBBC426CD0395003D878E /* About */,
+				26EBBBD026CD0B1B003D878E /* Finances */,
 			);
 			path = KYC;
 			sourceTree = "<group>";
@@ -260,6 +275,20 @@
 				2659A3B826CC71D20001BB93 /* MZSectionListController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		26EBBBD026CD0B1B003D878E /* Finances */ = {
+			isa = PBXGroup;
+			children = (
+				26EBBBD126CD0B3C003D878E /* 0.MZFinancesLandingController.swift */,
+				26EBBBD326CD0CE5003D878E /* 1.MZFinancesIncomeController.swift */,
+				26EBBBD526CD0EA8003D878E /* 2.MZFinancesIncomeDownController.swift */,
+				26EBBBD726CD0F16003D878E /* 3.MZFinancesHousingController.swift */,
+				26EBBBD926CD0F71003D878E /* 4.MZFinancesRentingSpendController.swift */,
+				26EBBBDB26CD0FAD003D878E /* 5.MZFinancesRelyController.swift */,
+				26EBBBDD26CD1009003D878E /* 6.MZFinancesRelyCountController.swift */,
+			);
+			path = Finances;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,12 +426,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				26916B3F26CB586000AC9436 /* ViewController.swift in Sources */,
+				26EBBBD426CD0CE5003D878E /* 1.MZFinancesIncomeController.swift in Sources */,
 				26EBBBC126CCFC54003D878E /* 1.MZAboutCitizenController.swift in Sources */,
 				2659A3AF26CC67330001BB93 /* MZBaseListKycController.swift in Sources */,
 				26EBBBC926CD04BD003D878E /* 4.MZAboutRightExpirationController.swift in Sources */,
 				26916B3B26CB586000AC9436 /* AppDelegate.swift in Sources */,
+				26EBBBDE26CD1009003D878E /* 6.MZFinancesRelyCountController.swift in Sources */,
 				26916C3526CB640300AC9436 /* KNGeneral.swift in Sources */,
 				2659A3B526CC6D660001BB93 /* KNUITextFieldExtension.swift in Sources */,
+				26EBBBD826CD0F16003D878E /* 3.MZFinancesHousingController.swift in Sources */,
 				26916C8726CB8D3800AC9436 /* MZBaseKycController.swift in Sources */,
 				2659A3B926CC71D20001BB93 /* MZSectionListController.swift in Sources */,
 				2659A3B326CC6A060001BB93 /* MZTextKycController.swift in Sources */,
@@ -412,8 +444,12 @@
 				2659A3B126CC67800001BB93 /* MZKycListView.swift in Sources */,
 				26916B3D26CB586000AC9436 /* SceneDelegate.swift in Sources */,
 				26EBBBC326CCFD6B003D878E /* 2.MZAboutPrimaryCitizenshipController.swift in Sources */,
+				26EBBBDA26CD0F71003D878E /* 4.MZFinancesRentingSpendController.swift in Sources */,
 				26EBBBC726CD0411003D878E /* 3.MZAboutRightController.swift in Sources */,
+				26EBBBD226CD0B3C003D878E /* 0.MZFinancesLandingController.swift in Sources */,
 				26EBBBCD26CD0A42003D878E /* 6.MZAboutIncomeController.swift in Sources */,
+				26EBBBD626CD0EA8003D878E /* 2.MZFinancesIncomeDownController.swift in Sources */,
+				26EBBBDC26CD0FAD003D878E /* 5.MZFinancesRelyController.swift in Sources */,
 				26EBBBCB26CD0735003D878E /* 5.MZAboutEmploymentStatusController.swift in Sources */,
 				2659A3AD26CC56AE0001BB93 /* KNTableExtension.swift in Sources */,
 				26EBBBCF26CD0AC0003D878E /* 0.MZAboutLandingController.swift in Sources */,

@@ -19,12 +19,19 @@ class MZBaseKycController: KNController {
     let titleDescritionLabel = UILabel(font: .main(size: 16),
                                        color: .color999999,
                                        numberOfLines: 0)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setData()
+    }
+
     override func setupView() {
         view.backgroundColor = .bg
         formatNavigationBar()
         addTitleToHeader()
         addFooterWithButton()
     }
+    
+    func setData() {}
 }
 
 // MARK: - Component Builders

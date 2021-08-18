@@ -2,19 +2,19 @@
 
 import UIKit
 
-class KNView : UIView {
+class KNView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         setupView()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
         xibSetup()
     }
-    
+
     func setupView() { }
 }
 
@@ -24,7 +24,7 @@ extension UIView {
         guard let view = loadNib() else { return }
         view.frame = bounds
         addSubview(view)
-        
+
         view.translatesAutoresizingMaskIntoConstraints = false
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[childView]|",
                                                       options: [],
@@ -35,7 +35,7 @@ extension UIView {
                                                       metrics: nil,
                                                       views: ["childView": view]))
     }
-    
+
     func loadNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let nibName = type(of: self).description().components(separatedBy: ".").last!
@@ -56,11 +56,17 @@ class KNController: UIViewController {
             getData()
         }
     }
-    
+
     func setupView() {}
     func getData() {}
     deinit {
         print("Deinit \(NSStringFromClass(type(of: self)))")
+    }
+
+    @objc func hideKeyboard() {
+        UIApplication.shared.sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil, from: nil, for: nil)
     }
 }
 
@@ -69,7 +75,7 @@ extension UIView {
         layer.borderColor = color.cgColor
         layer.borderWidth = width
     }
-    
+
     func setCorner(radius: CGFloat) {
         layer.cornerRadius = radius
         clipsToBounds = true

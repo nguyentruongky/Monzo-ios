@@ -23,7 +23,6 @@ class MZBaseListKycController: MZBaseKycController {
         listView.verticalSpacingDown(toView: footerView, space: -32)
     }
     
-    func setData() {}
     @objc func goNext() { }
     func didSelectItems(_ items: [MZKycListItemModel]) {
         nextButton.isEnabled = items.isEmpty == false
