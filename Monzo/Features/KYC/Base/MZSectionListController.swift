@@ -44,16 +44,16 @@ class MZSectionListController: MZBaseKycController {
         // Footer
         nextButton.setTitle("Get started")
         
-        let additionFooterView = UIView(background: .secondaryBg)
+        let additionalFooterView = UIView(background: .secondaryBg)
         let line = UIView(background: UIColor.color_88_192_85)
-        additionFooterView.addSubviews(views: line)
+        additionalFooterView.addSubviews(views: line)
         line.horizontalSuperview()
         line.topToSuperview()
         line.height(1)
         
-        let privacyView = UIView(background: .color_58_68_86)
+        let privacyView = UIView(background: .color_35_46_65)
         privacyView.setCorner(radius: 10)
-        additionFooterView.addSubviews(views: privacyView)
+        additionalFooterView.addSubviews(views: privacyView)
         privacyView.horizontalSuperview(space: 16)
         privacyView.topToSuperview(space: 16)
         privacyView.bottomToSuperview()
@@ -71,9 +71,9 @@ class MZSectionListController: MZBaseKycController {
         privacyLabel.rightToSuperview(space: -16)
         privacyLabel.verticalSuperview(space: 16)
         
-        view.addSubviews(views: additionFooterView)
-        additionFooterView.horizontalSuperview()
-        additionFooterView.verticalSpacingDown(toView: footerView, space: 0)
+        view.addSubviews(views: additionalFooterView)
+        additionalFooterView.horizontalSuperview()
+        additionalFooterView.verticalSpacingDown(toView: footerView, space: 0)
     }
     
     func setSectionData() {

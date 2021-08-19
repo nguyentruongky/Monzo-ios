@@ -29,6 +29,8 @@ extension UIColor {
     static let color999999 = UIColor(hex: "#999999")!
     static let color_35_46_65 = UIColor(r: 35, g: 46, b: 65)
     static let color_58_68_86 = UIColor(r: 58, g: 68, b: 68)
+    static let color_58_124_164 = UIColor(r: 58, g: 124, b: 164)
+    static let color_78_157_207 = UIColor(r: 78, g: 107, b: 207)
     static let color_88_192_85 = UIColor(r: 88, g: 192, b: 85)
     static let color_198_205_208 = UIColor(r: 198, g: 205, b: 208)
 }

@@ -35,9 +35,9 @@ extension UITextField {
     }
 
     @discardableResult
-    func setView(_ view: ViewType, image: UIImage?) -> UIButton {
-        let wrapper = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 100))
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 100))
+    func setView(_ view: ViewType, image: UIImage?, size: CGFloat = 50) -> UIButton {
+        let wrapper = UIView(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: size, height: size))
         button.setImage(image, for: UIControl.State())
         button.imageView!.contentMode = UIView.ContentMode.scaleAspectFit
         wrapper.addSubview(button)

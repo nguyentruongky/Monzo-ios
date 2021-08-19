@@ -55,6 +55,17 @@
 		26EBBBE926CD137A003D878E /* 4.MZAccountAmountMonthlyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBE826CD137A003D878E /* 4.MZAccountAmountMonthlyController.swift */; };
 		26EBBBEB26CD13B5003D878E /* 5.MZAccountInternationTransferController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBEA26CD13B5003D878E /* 5.MZAccountInternationTransferController.swift */; };
 		26EBBBED26CD13F1003D878E /* 6.MZAccountTransferToCountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBEC26CD13F1003D878E /* 6.MZAccountTransferToCountryController.swift */; };
+		26EBBBF026CD146F003D878E /* MZIdentityLandinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBEF26CD146F003D878E /* MZIdentityLandinController.swift */; };
+		26EBBBF226CD149C003D878E /* MZIdentityInstructionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBF126CD149C003D878E /* MZIdentityInstructionController.swift */; };
+		26EBBBF426CD82D5003D878E /* MZIdentityPhotoIdInstructionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBF326CD82D5003D878E /* MZIdentityPhotoIdInstructionController.swift */; };
+		26EBBBF626CD8D1B003D878E /* MZIdentityCountryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBF526CD8D1B003D878E /* MZIdentityCountryListController.swift */; };
+		26EBBBF826CD8E8D003D878E /* MZIdentityTakePhotoIDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBF726CD8E8D003D878E /* MZIdentityTakePhotoIDController.swift */; };
+		26EBBBFA26CD967A003D878E /* MZIdentityRecordInstructionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBF926CD967A003D878E /* MZIdentityRecordInstructionController.swift */; };
+		26EBBBFC26CD9BC5003D878E /* MZIdentityRecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBFB26CD9BC5003D878E /* MZIdentityRecordingController.swift */; };
+		26EBBBFE26CDA100003D878E /* MZIdentityTaxUSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBFD26CDA100003D878E /* MZIdentityTaxUSController.swift */; };
+		26EBBC0026CDA2F4003D878E /* MZIdentityTaxCountryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBBFF26CDA2F4003D878E /* MZIdentityTaxCountryListController.swift */; };
+		26EBBC0226CDA464003D878E /* MZIdentityTaxSelectedCountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBC0126CDA464003D878E /* MZIdentityTaxSelectedCountryController.swift */; };
+		26EBBC0426CE2306003D878E /* MZIdentityReasonNoTaxNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBBC0326CE2306003D878E /* MZIdentityReasonNoTaxNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +140,17 @@
 		26EBBBE826CD137A003D878E /* 4.MZAccountAmountMonthlyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.MZAccountAmountMonthlyController.swift; sourceTree = "<group>"; };
 		26EBBBEA26CD13B5003D878E /* 5.MZAccountInternationTransferController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5.MZAccountInternationTransferController.swift; sourceTree = "<group>"; };
 		26EBBBEC26CD13F1003D878E /* 6.MZAccountTransferToCountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6.MZAccountTransferToCountryController.swift; sourceTree = "<group>"; };
+		26EBBBEF26CD146F003D878E /* MZIdentityLandinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZIdentityLandinController.swift; sourceTree = "<group>"; };
+		26EBBBF126CD149C003D878E /* MZIdentityInstructionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZIdentityInstructionController.swift; sourceTree = "<group>"; };
+		26EBBBF326CD82D5003D878E /* MZIdentityPhotoIdInstructionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZIdentityPhotoIdInstructionController.swift; sourceTree = "<group>"; };
+		26EBBBF526CD8D1B003D878E /* MZIdentityCountryListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZIdentityCountryListController.swift; sourceTree = "<group>"; };
+		26EBBBF726CD8E8D003D878E /* MZIdentityTakePhotoIDController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZIdentityTakePhotoIDController.swift; sourceTree = "<group>"; };
+		26EBBBF926CD967A003D878E /* MZIdentityRecordInstructionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZIdentityRecordInstructionController.swift; sourceTree = "<group>"; };
+		26EBBBFB26CD9BC5003D878E /* MZIdentityRecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZIdentityRecordingController.swift; sourceTree = "<group>"; };
+		26EBBBFD26CDA100003D878E /* MZIdentityTaxUSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZIdentityTaxUSController.swift; sourceTree = "<group>"; };
+		26EBBBFF26CDA2F4003D878E /* MZIdentityTaxCountryListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZIdentityTaxCountryListController.swift; sourceTree = "<group>"; };
+		26EBBC0126CDA464003D878E /* MZIdentityTaxSelectedCountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZIdentityTaxSelectedCountryController.swift; sourceTree = "<group>"; };
+		26EBBC0326CE2306003D878E /* MZIdentityReasonNoTaxNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZIdentityReasonNoTaxNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +283,7 @@
 				26EBBBC426CD0395003D878E /* About */,
 				26EBBBD026CD0B1B003D878E /* Finances */,
 				26EBBBDF26CD10C3003D878E /* Account */,
+				26EBBBEE26CD1455003D878E /* Identity */,
 			);
 			path = KYC;
 			sourceTree = "<group>";
@@ -318,6 +341,24 @@
 				26EBBBEC26CD13F1003D878E /* 6.MZAccountTransferToCountryController.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		26EBBBEE26CD1455003D878E /* Identity */ = {
+			isa = PBXGroup;
+			children = (
+				26EBBBEF26CD146F003D878E /* MZIdentityLandinController.swift */,
+				26EBBBF126CD149C003D878E /* MZIdentityInstructionController.swift */,
+				26EBBBF326CD82D5003D878E /* MZIdentityPhotoIdInstructionController.swift */,
+				26EBBBF526CD8D1B003D878E /* MZIdentityCountryListController.swift */,
+				26EBBBF726CD8E8D003D878E /* MZIdentityTakePhotoIDController.swift */,
+				26EBBBF926CD967A003D878E /* MZIdentityRecordInstructionController.swift */,
+				26EBBBFB26CD9BC5003D878E /* MZIdentityRecordingController.swift */,
+				26EBBBFD26CDA100003D878E /* MZIdentityTaxUSController.swift */,
+				26EBBBFF26CDA2F4003D878E /* MZIdentityTaxCountryListController.swift */,
+				26EBBC0126CDA464003D878E /* MZIdentityTaxSelectedCountryController.swift */,
+				26EBBC0326CE2306003D878E /* MZIdentityReasonNoTaxNumber.swift */,
+			);
+			path = Identity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,17 +496,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				26916B3F26CB586000AC9436 /* ViewController.swift in Sources */,
+				26EBBBFE26CDA100003D878E /* MZIdentityTaxUSController.swift in Sources */,
 				26EBBBD426CD0CE5003D878E /* 1.MZFinancesIncomeController.swift in Sources */,
+				26EBBBFC26CD9BC5003D878E /* MZIdentityRecordingController.swift in Sources */,
 				26EBBBED26CD13F1003D878E /* 6.MZAccountTransferToCountryController.swift in Sources */,
 				26EBBBC126CCFC54003D878E /* 1.MZAboutCitizenController.swift in Sources */,
 				26EBBBE126CD10D9003D878E /* 0.MZAccountLandingController.swift in Sources */,
 				2659A3AF26CC67330001BB93 /* MZBaseListKycController.swift in Sources */,
+				26EBBBFA26CD967A003D878E /* MZIdentityRecordInstructionController.swift in Sources */,
+				26EBBC0226CDA464003D878E /* MZIdentityTaxSelectedCountryController.swift in Sources */,
 				26EBBBC926CD04BD003D878E /* 4.MZAboutRightExpirationController.swift in Sources */,
 				26916B3B26CB586000AC9436 /* AppDelegate.swift in Sources */,
 				26EBBBDE26CD1009003D878E /* 6.MZFinancesRelyCountController.swift in Sources */,
+				26EBBBF426CD82D5003D878E /* MZIdentityPhotoIdInstructionController.swift in Sources */,
 				26916C3526CB640300AC9436 /* KNGeneral.swift in Sources */,
 				2659A3B526CC6D660001BB93 /* KNUITextFieldExtension.swift in Sources */,
 				26EBBBD826CD0F16003D878E /* 3.MZFinancesHousingController.swift in Sources */,
+				26EBBBF826CD8E8D003D878E /* MZIdentityTakePhotoIDController.swift in Sources */,
 				26916C8726CB8D3800AC9436 /* MZBaseKycController.swift in Sources */,
 				2659A3B926CC71D20001BB93 /* MZSectionListController.swift in Sources */,
 				2659A3B326CC6A060001BB93 /* MZTextKycController.swift in Sources */,
@@ -474,6 +521,7 @@
 				2659A3B726CC6EA80001BB93 /* MZKycLandingController.swift in Sources */,
 				2659A3B126CC67800001BB93 /* MZKycListView.swift in Sources */,
 				26916B3D26CB586000AC9436 /* SceneDelegate.swift in Sources */,
+				26EBBBF626CD8D1B003D878E /* MZIdentityCountryListController.swift in Sources */,
 				26EBBBC326CCFD6B003D878E /* 2.MZAboutPrimaryCitizenshipController.swift in Sources */,
 				26EBBBDA26CD0F71003D878E /* 4.MZFinancesRentingSpendController.swift in Sources */,
 				26EBBBC726CD0411003D878E /* 3.MZAboutRightController.swift in Sources */,
@@ -481,12 +529,16 @@
 				26EBBBCD26CD0A42003D878E /* 6.MZAboutIncomeController.swift in Sources */,
 				26EBBBD626CD0EA8003D878E /* 2.MZFinancesIncomeDownController.swift in Sources */,
 				26EBBBDC26CD0FAD003D878E /* 5.MZFinancesRelyController.swift in Sources */,
+				26EBBC0426CE2306003D878E /* MZIdentityReasonNoTaxNumber.swift in Sources */,
 				26EBBBE526CD12B3003D878E /* 2.MZAccountFirstPaymentAmountController.swift in Sources */,
+				26EBBBF026CD146F003D878E /* MZIdentityLandinController.swift in Sources */,
 				26EBBBCB26CD0735003D878E /* 5.MZAboutEmploymentStatusController.swift in Sources */,
 				2659A3AD26CC56AE0001BB93 /* KNTableExtension.swift in Sources */,
+				26EBBC0026CDA2F4003D878E /* MZIdentityTaxCountryListController.swift in Sources */,
 				26EBBBCF26CD0AC0003D878E /* 0.MZAboutLandingController.swift in Sources */,
 				26916C8326CB669100AC9436 /* KNUIColorExtension.swift in Sources */,
 				26916C3726CB640300AC9436 /* KNView+KNController.swift in Sources */,
+				26EBBBF226CD149C003D878E /* MZIdentityInstructionController.swift in Sources */,
 				26916C3926CB640300AC9436 /* KNConstraints.swift in Sources */,
 				26EBBBEB26CD13B5003D878E /* 5.MZAccountInternationTransferController.swift in Sources */,
 				26EBBBE726CD12F4003D878E /* 3.MZAccountHowUseController.swift in Sources */,

@@ -15,7 +15,6 @@ class MZBaseListKycController: MZBaseKycController {
             self?.didSelectItems(items)
         }
         super.setupView()
-        nextButton.addTarget(self, action: #selector(goNext))
         
         view.addSubviews(views: listView)
         listView.horizontalSuperview()
@@ -23,7 +22,6 @@ class MZBaseListKycController: MZBaseKycController {
         listView.verticalSpacingDown(toView: footerView, space: -32)
     }
     
-    @objc func goNext() { }
     func didSelectItems(_ items: [MZKycListItemModel]) {
         nextButton.isEnabled = items.isEmpty == false
     }

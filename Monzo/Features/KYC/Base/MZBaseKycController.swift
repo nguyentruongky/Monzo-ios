@@ -29,8 +29,10 @@ class MZBaseKycController: KNController {
         formatNavigationBar()
         addTitleToHeader()
         addFooterWithButton()
+        nextButton.addTarget(self, action: #selector(goNext))
     }
     
+    @objc func goNext() { }
     func setData() {}
 }
 
@@ -62,6 +64,7 @@ extension MZBaseKycController {
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 
 }
