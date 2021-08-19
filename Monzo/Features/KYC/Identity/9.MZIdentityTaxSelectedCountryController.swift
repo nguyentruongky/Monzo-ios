@@ -2,9 +2,16 @@
 
 import UIKit
 
+struct Country {
+    let name: String
+    let flag: String
+}
+
 class MZIdentityTaxSelectedCountryController: MZBaseKycController {
     override var step: KycRouter.Step { .identityNricNumber }
 
+    var country: Country?
+    
     let flagTextField = UITextField()
     let numberTextField = UITextField(placeholder: "NRIC Numbe/FIN", font: .main(), color: .white)
     override func setupView() {
@@ -17,6 +24,12 @@ class MZIdentityTaxSelectedCountryController: MZBaseKycController {
         
         setupBodyView()
         setupFooterView()
+    }
+    
+    override func setData() {
+        guard let country = country else { return }
+        titleDescritionLabel.text = "We need a final bit of information to understand your \(country.name) tax residency"
+        flagTextField.text = country.flag
     }
     
     func setupBodyView() {
@@ -127,6 +140,11 @@ class MZIdentityTaxSelectedCountryController: MZBaseKycController {
     }
     
     func didSelectReasonNotHavingANumber(reason: String) {
-        print(reason)
+        router.goNext(from: self, data: ["reason": reason])
+    }
+    
+    override func goNext() {
+        guard let id = numberTextField.text else { return }
+        router.goNext(from: self, data: ["id": id])
     }
 }

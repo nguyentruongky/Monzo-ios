@@ -51,7 +51,7 @@ class MZTextKycController: MZBaseKycController {
     
     override func goNext() {
         guard let answer = textField.text else { return }
-        router.goNext(from: self, data: ["1": answer])
+        router.goNext(from: self, data: answer)
     }
 }
 

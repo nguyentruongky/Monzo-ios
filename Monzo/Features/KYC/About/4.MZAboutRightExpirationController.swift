@@ -28,6 +28,6 @@ class MZAboutRightExpirationController: MZBaseKycController {
     
     override func goNext() {
         let date = datePicker.date
-        router.goNext(from: self, data: ["1": date])
+        router.goNext(from: self, data: date)
     }
 }

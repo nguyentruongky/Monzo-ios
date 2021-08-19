@@ -114,7 +114,7 @@ class MZIdentityPhotoIdInstructionController: MZBaseKycController {
     var selectedIDType: String? {
         didSet {
             if let type = selectedIDType {
-                router.goNext(from: self, data: ["1": type])
+                router.goNext(from: self, data: type)
             }
         }
     }

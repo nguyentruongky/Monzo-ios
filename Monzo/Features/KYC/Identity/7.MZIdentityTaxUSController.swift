@@ -62,5 +62,14 @@ class MZIdentityTaxUSController: MZBaseKycController {
         footerView.addSubviews(views: notButton)
         notButton.centerXToSuperview()
         notButton.verticalSpacing(toView: nextButton, space: 16)
+        notButton.addTarget(self, action: #selector(notButtonPressed))
+    }
+    
+    override func goNext() {
+        router.goNext(from: self, data: "yes")
+    }
+    
+    @objc func notButtonPressed() {
+        router.goNext(from: self, data: "no")
     }
 }

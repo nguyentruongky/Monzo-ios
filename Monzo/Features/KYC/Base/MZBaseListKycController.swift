@@ -30,10 +30,10 @@ class MZBaseListKycController: MZBaseKycController {
     
     override func goNext() {
         if listView.isMultiChoice {
-            router.goNext(from: self, data: ["1": answers.map { $0.title }])
+            router.goNext(from: self, data: answers.map { $0.title })
         } else {
             guard let answer = answers.first?.title else { return }
-            router.goNext(from: self, data: ["1": answer])
+            router.goNext(from: self, data: answer)
         }
     }
 }

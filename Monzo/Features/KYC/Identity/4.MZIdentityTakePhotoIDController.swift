@@ -130,7 +130,7 @@ class MZIdentityTakePhotoIDFrontController: MZBaseKycController {
     
     override func goNext() {
         guard let image = image else { return }
-        router.goNext(from: self, data: ["1": image])
+        router.goNext(from: self, data: image)
     }
     
 }

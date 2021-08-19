@@ -147,6 +147,6 @@ class MZIdentityRecordingController: MZBaseKycController {
     }
     
     func submitVideo() {
-        
+        router.goNext(from: self)
     }
 }

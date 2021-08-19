@@ -43,7 +43,7 @@ class MZBaseKycController: KNController {
     }
     
     @objc func goNext() {
-        router.goNext(from: self, data: [:])
+        router.goNext(from: self)
     }
     func setData() {}
 }
