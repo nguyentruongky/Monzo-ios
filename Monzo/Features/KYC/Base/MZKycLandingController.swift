@@ -3,6 +3,7 @@
 import UIKit
 
 class MZKycLandingController: MZBaseKycController {
+    override var step: KycRouter.Step { .kycLanding }
     override func setupView() {
         super.setupView()
         

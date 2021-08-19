@@ -4,7 +4,8 @@ import UIKit
 
 class MZBaseListKycController: MZBaseKycController {
     let listView = MZKycListView()
-
+    var answers = [MZKycListItemModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setData()
@@ -22,7 +23,8 @@ class MZBaseListKycController: MZBaseKycController {
         listView.verticalSpacingDown(toView: footerView, space: -32)
     }
     
-    func didSelectItems(_ items: [MZKycListItemModel]) {
+    private func didSelectItems(_ items: [MZKycListItemModel]) {
         nextButton.isEnabled = items.isEmpty == false
+        answers = items
     }
 }
