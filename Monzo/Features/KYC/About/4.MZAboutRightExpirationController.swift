@@ -3,6 +3,8 @@
 import UIKit
 
 class MZAboutRightExpirationController: MZBaseKycController {
+    override var step: KycRouter.Step { .aboutRightExpiration }
+    
     let datePicker = UIDatePicker()
     override func setupView() {
         super.setupView()
@@ -10,6 +12,7 @@ class MZAboutRightExpirationController: MZBaseKycController {
         titleLabel.text = "When does your right to live in the UK end?"
         titleDescritionLabel.text = "If you don't know the exact date, use the first of the month"
         
+        datePicker.minimumDate = Date()
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
         datePicker.setValue(false, forKeyPath: "highlightsToday")
@@ -21,5 +24,10 @@ class MZAboutRightExpirationController: MZBaseKycController {
         datePicker.horizontalSuperview(space: 16)
         datePicker.verticalSpacing(toView: headerView, space: 32)
         datePicker.height(200)
+    }
+    
+    override func goNext() {
+        let date = datePicker.date
+        router.goNext(from: self, data: ["1": date])
     }
 }

@@ -3,6 +3,7 @@
 import UIKit
 
 class MZAboutCitizenController: MZBaseListKycController {
+    override var step: KycRouter.Step { .aboutBritishCitizen }
     override func setData() {
         sectionLabel.text = "ABOUT YOU"
         titleLabel.text = "Are you a British citizen?"
@@ -11,7 +12,8 @@ class MZAboutCitizenController: MZBaseListKycController {
     }
     
     override func goNext() {
-        let vc = MZAboutPrimaryCitizenshipController()
-        navigationController?.pushViewController(vc, animated: true)
+        guard let answer = answers.first?.title.lowercased() else { return }
+        let isBritishCitizen = answer == "yes"
+        router.goNext(from: self, data: ["1": isBritishCitizen])
     }
 }

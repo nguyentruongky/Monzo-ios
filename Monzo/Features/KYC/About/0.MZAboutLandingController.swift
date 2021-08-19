@@ -2,5 +2,5 @@
 import UIKit
 
 class MZAboutLandingController: MZSectionListController {
-    
+    override var step: KycRouter.Step { .aboutLanding }
 }

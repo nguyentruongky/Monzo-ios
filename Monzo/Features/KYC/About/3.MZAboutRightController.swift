@@ -3,6 +3,8 @@
 import UIKit
 
 class MZAboutRightController: MZBaseListKycController {
+    override var step: KycRouter.Step { .aboutRightInUK }
+
     override func setData() {
         sectionLabel.text = "ABOUT YOU"
         titleLabel.text = "What rights do you have to live in the UK?"
@@ -13,5 +15,10 @@ class MZAboutRightController: MZBaseListKycController {
             "I don't have the right to live in the UK",
         ]
         listView.setData(stringArrays: rights)
+    }
+    
+    override func goNext() {
+        guard let answer = answers.first?.title else { return }
+        router.goNext(from: self, data: ["1": answer])
     }
 }
