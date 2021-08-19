@@ -1,7 +1,7 @@
 //  Created by Ky Nguyen
 import UIKit
 
-class MZIdentityLandinController: MZSectionListController {
+class MZIdentityLandingController: MZSectionListController {
     override var descriptionText: String {
         "Almost done, last section now..."
     }

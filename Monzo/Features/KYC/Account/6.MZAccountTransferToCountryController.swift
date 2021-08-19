@@ -3,6 +3,8 @@
 import UIKit
 
 class MZAccountTransferToCountryController: MZBaseListKycController {
+    override var step: KycRouter.Step { .accountWhereTransfer }
+
     override func setData() {
         sectionLabel.text = "YOUR ACCOUNT"
         titleLabel.text = "Where will your international transfers come from and go to?"

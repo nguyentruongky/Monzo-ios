@@ -3,6 +3,8 @@
 import UIKit
 
 class MZAccountFistPaymentController: MZBaseListKycController {
+    override var step: KycRouter.Step { .accountFirstPaymentFrom }
+
     override func setData() {
         sectionLabel.text = "YOUR ACCOUNT"
         titleLabel.text = "Where will the first payment into your account come from?"

@@ -2,6 +2,8 @@
 import UIKit
 
 class MZAccountLandingController: MZSectionListController {
+    override var step: KycRouter.Step { .accountLanding }
+
     override var descriptionText: String {
         "You're halfway there..."
     }

@@ -3,6 +3,8 @@
 import UIKit
 
 class MZAccountHowUseController: MZBaseListKycController {
+    override var step: KycRouter.Step { .accountHowUseMonzo }
+
     override func setData() {
         sectionLabel.text = "YOUR ACCOUNT"
         titleLabel.text = "How do you expect to use your Monzo account?"
