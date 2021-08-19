@@ -3,6 +3,8 @@
 import UIKit
 
 class MZIdentityTaxUSController: MZBaseKycController {
+    override var step: KycRouter.Step { .identityUsCitizen }
+
     override func setupView() {
         super.setupView()
         headerView.removeFromSuperview()

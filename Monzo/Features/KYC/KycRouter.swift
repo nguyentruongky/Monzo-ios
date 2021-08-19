@@ -17,6 +17,59 @@ class KycRouter {
                 source.navigationController?.setViewControllers([vc], animated: true)
                 
             // ABOUT SECTION
+            case .aboutLanding,
+                 .aboutBritishCitizen,
+                 .aboutPrimaryCitizenship,
+                 .aboutRightInUK,
+                 .aboutRightExpiration,
+                 .aboutEmploymentStatus,
+                 .aboutIncomeFromEmployment:
+                navigateInAboutSection(from: source, data: data)
+                
+                
+                // FINANCES SECTION
+            case .financesLanding,
+                 .financesAnnualIncome,
+                 .financesIncomeDown,
+                 .financesHousingStatus,
+                 .financesHouseSpendingMonthly,
+                 .financesHaveReliedPeople,
+                 .financesReliedPeopleCount:
+                navigateInFinancesSection(from: source, data: data)
+                
+
+            // ACCOUNT SECTION
+            case .accountLanding,
+                 .accountFirstPaymentFrom,
+                 .accountHowMuchFirstPayment,
+                 .accountHowUseMonzo,
+                 .accountHowMuchDepositMonthly,
+                 .accountDoesInternationalTransfer,
+                 .accountWhereTransfer:
+                navigateInAccountSection(from: source, data: data)
+
+                
+            // Identity Section
+            case .identityLanding,
+                 .identityInstruction,
+                 .identityIdCountry,
+                 .identityTakePhotoInstruction,
+                 .identityTakingFrontCard,
+                 .identityTakingBackCard,
+                 .identityVideoInstruction,
+                 .identityRecordVideo,
+                 .identityUsCitizen,
+                 .identityTaxCountry,
+                 .identityNricNumber:
+            navigateInIdentitySection(from: source, data: data)
+
+            default:
+                break
+        }
+    }
+    
+    private func navigateInAboutSection(from source: MZBaseKycController, data: [String: Any]) {
+        switch source.step {
             case .aboutLanding:
                 let vc = MZAboutCitizenController()
                 nextSection(vc, from: source)
@@ -40,7 +93,9 @@ class KycRouter {
             case .aboutRightInUK:
                 let answer = data["1"] as? String
                 kycData["rights"] = answer
-                if answer?.lowercased().contains("permanently") == true {
+                let isPermanent = answer?.lowercased().contains("permanently") == true
+                let dontHaveRight = answer?.lowercased().contains("don't have the right") == true
+                if isPermanent || dontHaveRight {
                     let vc = MZAboutEmploymentStatusController()
                     push(vc, from: source)
                 } else {
@@ -62,9 +117,14 @@ class KycRouter {
                 kycData["haveEmploymentIncome"] = data["1"]
                 let vc = MZFinancesLandingController()
                 nextSection(vc, from: source)
-                
-                
-                // FINANCES SECTION
+
+            default:
+                break
+        }
+    }
+    
+    private func navigateInFinancesSection(from source: MZBaseKycController, data: [String: Any]) {
+        switch source.step {
             case .financesLanding:
                 let vc = MZFinancesIncomeController()
                 nextSection(vc, from: source)
@@ -95,7 +155,7 @@ class KycRouter {
                 kycData["houseSpending"] = data["1"]
                 let vc = MZFinancesRelyController()
                 push(vc, from: source)
-
+                
             case .financesHaveReliedPeople:
                 if let answer = data["1"] as? String {
                     if answer.lowercased() == "yes" {
@@ -114,9 +174,14 @@ class KycRouter {
                 kycData["relyFinanciallyCount"] = data["1"]
                 let vc = MZAccountLandingController()
                 nextSection(vc, from: source)
-                
 
-            // ACCOUNT SECTION
+            default:
+                break
+        }
+    }
+    
+    private func navigateInAccountSection(from source: MZBaseKycController, data: [String: Any]) {
+        switch source.step {
             case .accountLanding:
                 let vc = MZAccountFistPaymentController()
                 nextSection(vc, from: source)
@@ -160,7 +225,84 @@ class KycRouter {
                 kycData["internationalTransferDestination"] = data["1"]
                 let vc = MZIdentityLandingController()
                 nextSection(vc, from: source)
+                
+            default:
+                break
+        }
+    }
+    
+    private func navigateInIdentitySection(from source: MZBaseKycController, data: [String: Any]) {
+        switch source.step {
+            case .identityLanding:
+                let vc = MZIdentityInstructionController()
+                nextSection(vc, from: source)
+                
+            case .identityInstruction:
+                let vc = MZIdentityPhotoIdInstructionController()
+                nextSection(vc, from: source)
 
+            case .identityTakePhotoInstruction:
+                kycData[source.step.rawValue] = data["1"]
+                let answer = data["1"] as? String
+                if answer?.lowercased().contains("national identity") == true {
+                    let vc = MZIdentityCountryListController()
+                    push(vc, from: source)
+                } else {
+                    let vc = MZIdentityTakePhotoIDFrontController()
+                    vc.idType = answer
+                    push(vc, from: source)
+                }
+                
+            case .identityIdCountry:
+                kycData[source.step.rawValue] = data["1"]
+                let vc = MZIdentityTakePhotoIDFrontController()
+                vc.idType = kycData[Step.identityTakePhotoInstruction.rawValue] as? String
+                push(vc, from: source)
+                
+            case .identityTakingFrontCard:
+                kycData[source.step.rawValue] = data["1"]
+                let vc = MZIdentityTakePhotoIDBackController()
+                vc.idType = kycData[Step.identityTakePhotoInstruction.rawValue] as? String
+                push(vc, from: source)
+
+            case .identityTakingBackCard:
+                kycData[source.step.rawValue] = data["1"]
+                let vc = MZIdentityRecordInstructionController()
+                push(vc, from: source)
+                
+            case .identityVideoInstruction:
+                let vc = MZIdentityRecordingController()
+                push(vc, from: source)
+            
+            case .identityRecordVideo:
+                kycData[source.step.rawValue] = data["1"]
+                let vc = MZIdentityTaxUSController()
+                push(vc, from: source)
+                
+            case .identityUsCitizen:
+                kycData[source.step.rawValue] = data["1"]
+                let answer = data["1"] as? String
+                if answer?.lowercased() == "yes" {
+                    let vc = MZIdentityTaxSelectedCountryController()
+                    push(vc, from: source)
+                } else {
+                    let vc = MZIdentityTaxCountryListController()
+                    push(vc, from: source)
+                }
+                
+            case .identityTaxCountry:
+                kycData[source.step.rawValue] = data["1"]
+                let vc = MZIdentityTaxSelectedCountryController()
+                push(vc, from: source)
+                
+            case .identityNricNumber:
+                break
+                
+                
+            //            case identityUsCitizen
+            //            case identityTaxCountry
+            //            case identityNricNumber
+            
             default:
                 break
         }
@@ -181,7 +323,7 @@ class KycRouter {
 }
 
 extension KycRouter {
-    enum Step: Int {
+    enum Step: String {
         case unknowned
         case kycLanding
         
@@ -211,7 +353,7 @@ extension KycRouter {
         
         case identityLanding
         case identityInstruction
-        case identityTakePhotInstruction
+        case identityTakePhotoInstruction
         case identityIdCountry
         case identityTakingFrontCard
         case identityTakingBackCard
@@ -220,6 +362,7 @@ extension KycRouter {
         case identityUsCitizen
         case identityTaxCountry
         case identityNricNumber
+        case identityNoTaxNumber
         
         case finish
     }

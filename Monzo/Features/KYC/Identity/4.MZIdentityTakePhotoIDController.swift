@@ -2,14 +2,30 @@
 
 import UIKit
 
-class MZIdentityTakePhotoIDController: MZBaseKycController {
+class MZIdentityTakePhotoIDFrontController: MZBaseKycController {
+    override var step: KycRouter.Step { .identityTakingFrontCard }
     let exampleButton = UIButton(title: "Show an example", titleColor: .color_78_157_207, font: .main(size: 15))
     let takePhotoButton = UIButton(imageName: "take_photo")
     let cameraView = UIView(background: .black)
     let frameView = UIView(background: .clear)
     let takenImageView = UIImageView()
+    var image: UIImage? {
+        didSet {
+            takenImageView.image = image
+        }
+    }
     let retakeButton = UIButton(title: "Retake picture", titleColor: .color_78_157_207, font: .main(size: 15))
+    var idType: String?
+    var instruction: String {
+        "Make sure the front of your \(idType ?? "card") is in the frame"
+    }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = idType
+        titleDescritionLabel.text = instruction
+    }
+    
     enum Status {
         case taking, taken
     }
@@ -75,7 +91,7 @@ class MZIdentityTakePhotoIDController: MZBaseKycController {
         takenImageView.isHidden = true
         takenImageView.setCorner(radius: 10)
         takenImageView.setBorder(width: 1, color: .white)
-        takenImageView.image = UIImage(named: "sample_card")
+        takenImageView.image = UIImage(named: "sample_card_front")
         view.addSubviews(views: takenImageView)
         takenImageView.fill(toView: frameView)
     }
@@ -105,10 +121,28 @@ class MZIdentityTakePhotoIDController: MZBaseKycController {
     
     @objc func takePhoto() {
         status = .taken
+        image = UIImage(named: "sample_card_front")
     }
     
     @objc func retake() {
         status = .taking
     }
     
+    override func goNext() {
+        guard let image = image else { return }
+        router.goNext(from: self, data: ["1": image])
+    }
+    
+}
+
+class MZIdentityTakePhotoIDBackController: MZIdentityTakePhotoIDFrontController {
+    override var step: KycRouter.Step { .identityTakingBackCard }
+    override var instruction: String {
+        "Make sure the back of your \(idType ?? "card") is in the frame"
+    }
+    
+    @objc override func takePhoto() {
+        status = .taken
+        image = UIImage(named: "sample_card_back")
+    }
 }

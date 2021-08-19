@@ -3,6 +3,8 @@
 import UIKit
 
 class MZIdentityRecordingController: MZBaseKycController {
+    override var step: KycRouter.Step { .identityRecordVideo }
+
     let recordButton = UIButton(imageName: "record")
     let stopButton = UIButton(imageName: "stop")
     let cameraView = UIView(background: .black)

@@ -3,6 +3,8 @@
 import UIKit
 
 class MZIdentityTaxSelectedCountryController: MZBaseKycController {
+    override var step: KycRouter.Step { .identityNricNumber }
+
     let flagTextField = UITextField()
     let numberTextField = UITextField(placeholder: "NRIC Numbe/FIN", font: .main(), color: .white)
     override func setupView() {

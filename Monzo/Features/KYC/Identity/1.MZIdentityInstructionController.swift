@@ -3,6 +3,7 @@
 import UIKit
 
 class MZIdentityInstructionController: MZBaseKycController {
+    override var step: KycRouter.Step { .identityInstruction }
     override func setupView() {
         super.setupView()
         setupBodyView()

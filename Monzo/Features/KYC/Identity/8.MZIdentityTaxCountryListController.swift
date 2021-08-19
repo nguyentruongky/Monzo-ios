@@ -3,6 +3,8 @@
 import UIKit
 
 class MZIdentityTaxCountryListController: MZBaseListKycController {
+    override var step: KycRouter.Step { .identityTaxCountry }
+
     override func setData() {
         title = "Tax Residency"
         headerView.removeFromSuperview()

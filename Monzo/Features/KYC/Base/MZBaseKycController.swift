@@ -28,6 +28,11 @@ class MZBaseKycController: KNController {
         super.viewDidLoad()
         setData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.backButtonTitle = ""
+    }
 
     override func setupView() {
         view.backgroundColor = .bg

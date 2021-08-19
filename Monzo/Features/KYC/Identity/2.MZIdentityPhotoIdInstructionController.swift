@@ -3,8 +3,10 @@
 import UIKit
 
 class MZIdentityPhotoIdInstructionController: MZBaseKycController {
+    override var step: KycRouter.Step { .identityTakePhotoInstruction }
     override func setupView() {
         super.setupView()
+        title = "Verify your identity"
         setupBodyView()
         setupAdditionalFooterView()
         nextButton.setTitle("I'm ready")
@@ -109,7 +111,13 @@ class MZIdentityPhotoIdInstructionController: MZBaseKycController {
         
     }
     
-    var selectedIDType: String?
+    var selectedIDType: String? {
+        didSet {
+            if let type = selectedIDType {
+                router.goNext(from: self, data: ["1": type])
+            }
+        }
+    }
     
     override func goNext() {
         let vc = UIAlertController(title: nil, message: "What kind of ID would you like to use?", preferredStyle: .actionSheet)
@@ -118,7 +126,7 @@ class MZIdentityPhotoIdInstructionController: MZBaseKycController {
             "Passport",
             "Driving licence",
             "National identity card",
-            "UK biometric residence permic"
+            "UK biometric residence permit"
         ]
         actionNames.forEach { title in
             vc.addAction(UIAlertAction(title: title, style: .default, handler: { [weak self] _ in

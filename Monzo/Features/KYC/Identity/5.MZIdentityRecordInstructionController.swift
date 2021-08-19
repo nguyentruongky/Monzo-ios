@@ -3,6 +3,8 @@
 import UIKit
 
 class MZIdentityRecordInstructionController: MZBaseKycController {
+    override var step: KycRouter.Step { .identityVideoInstruction }
+
     let muteButton = UIButton()
     
     override func setupView() {
@@ -54,7 +56,7 @@ class MZIdentityRecordInstructionController: MZBaseKycController {
         exampleTag.contentEdgeInsets = UIEdgeInsets(left: 16, right: 16)
         exampleTag.setCorner(radius: 14)
         containerView.addSubviews(views: exampleTag)
-        exampleTag.topLeft(toView: containerView, topSpace: 48, leftSpace: 16)
+        exampleTag.topLeft(toView: containerView, topSpace: 16, leftSpace: 16)
         exampleTag.height(28)
     }
 
@@ -93,23 +95,4 @@ class MZIdentityRecordInstructionController: MZBaseKycController {
     }
     
     var selectedIDType: String?
-    
-    override func goNext() {
-        let vc = UIAlertController(title: nil, message: "What kind of ID would you like to use?", preferredStyle: .actionSheet)
-        
-        let actionNames = [
-            "Passport",
-            "Driving licence",
-            "National identity card",
-            "UK biometric residence permic"
-        ]
-        actionNames.forEach { title in
-            vc.addAction(UIAlertAction(title: title, style: .default, handler: { [weak self] _ in
-                self?.selectedIDType = title
-            }))
-        }
-        
-        vc.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        present(vc, animated: true)
-    }
 }

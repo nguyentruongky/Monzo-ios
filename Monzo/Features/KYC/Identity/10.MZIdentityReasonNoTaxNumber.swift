@@ -3,6 +3,8 @@
 import UIKit
 
 class MZIdentityReasonNoTaxNumber: MZTextKycController {
+    override var step: KycRouter.Step { .identityNoTaxNumber }
+
     override func setData() {
         titleLabel.text = "Reason for not having a Tax Identification Number (TIN)"
         textField.setView(.left, space: 16)
