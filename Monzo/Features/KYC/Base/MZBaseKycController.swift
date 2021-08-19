@@ -3,6 +3,11 @@
 import UIKit
 
 class MZBaseKycController: KNController {
+    var step: KycRouter.Step {
+        return .unknowned
+    }
+    let router = KycRouter.shared
+
     override var preferredStatusBarStyle: UIStatusBarStyle { .darkContent }
     let nextButton = UIButton(mainButtonWithTitle: "Next",
                               bgColor: .buttonBg,
@@ -32,7 +37,9 @@ class MZBaseKycController: KNController {
         nextButton.addTarget(self, action: #selector(goNext))
     }
     
-    @objc func goNext() { }
+    @objc func goNext() {
+        router.goNext(from: self, data: [:])
+    }
     func setData() {}
 }
 
@@ -52,11 +59,10 @@ extension MZBaseKycController {
     }
 
     func addTitleToHeader() {
-
         headerView.addArrangeViews(views: sectionLabel, titleLabel, titleDescritionLabel)
         view.addSubviews(views: headerView)
         headerView.horizontalSuperview(space: 16)
-        headerView.topToSuperviewSafeArea()
+        headerView.topToSuperviewSafeArea(space: 16)
     }
 
     func formatNavigationBar() {

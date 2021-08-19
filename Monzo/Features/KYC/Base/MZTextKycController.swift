@@ -20,6 +20,7 @@ class MZTextKycController: MZBaseKycController {
         textField.height(48)
         textField.inputAccessoryView = inputAccessoryView
         textField.setView(.left, title: "£", space: 16)
+        textField.delegate = self
     }
     
     lazy var accessoryView: UIView = { [weak self] in
@@ -34,6 +35,34 @@ class MZTextKycController: MZBaseKycController {
     }()
 
     override var canBecomeFirstResponder: Bool { true }
-
+    
+    override func hideKeyboard() {
+        if isFirstResponder { return }
+        super.hideKeyboard()
+    }
+    
     override var inputAccessoryView: UIView? { accessoryView }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        textField.becomeFirstResponder()
+        nextButton.isEnabled = textField.text?.isEmpty == false
+    }
+    
+    override func goNext() {
+        guard let answer = textField.text else { return }
+        router.goNext(from: self, data: ["1": answer])
+    }
+}
+
+extension MZTextKycController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.becomeFirstResponder()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string)
+        nextButton.isEnabled = newText?.isEmpty == false
+        return true
+    }
 }

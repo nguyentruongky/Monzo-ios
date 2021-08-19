@@ -17,10 +17,5 @@ class MZAboutEmploymentStatusController: MZBaseListKycController {
             "Not working due to illness/disabilityNot working due to illness/disability",
         ]
         listView.setData(stringArrays: statuses)
-    }
-    
-    override func goNext() {
-        guard let answer = answers.first?.title else { return }
-        router.goNext(from: self, data: ["1": answer])
-    }
+    }    
 }

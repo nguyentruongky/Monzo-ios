@@ -35,9 +35,4 @@ class MZAboutPrimaryCitizenshipController: MZBaseListKycController {
                                         "Spain",
                                         "Sweden"])
     }
-    
-    override func goNext() {
-        guard let answer = answers.first?.title else { return }
-        router.goNext(from: self, data: ["1": answer])
-    }
 }

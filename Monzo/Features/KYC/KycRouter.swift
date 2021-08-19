@@ -19,95 +19,159 @@ class KycRouter {
             // ABOUT SECTION
             case .aboutLanding:
                 let vc = MZAboutCitizenController()
-                source.navigationController?.setViewControllers([vc], animated: true)
+                nextSection(vc, from: source)
                 
             case .aboutBritishCitizen:
-                let isBritish = data["1"] as? Bool ?? false
-                if isBritish {
+                let answer = data["1"] as? String
+                if answer?.lowercased() == "yes" {
                     kycData["citizen"] = "British"
                     let vc = MZAboutEmploymentStatusController()
-                    source.navigationController?.pushViewController(vc, animated: true)
+                    push(vc, from: source)
                 } else {
                     let vc = MZAboutPrimaryCitizenshipController()
-                    source.navigationController?.pushViewController(vc, animated: true)
+                    push(vc, from: source)
                 }
                 
             case .aboutPrimaryCitizenship:
                 kycData["citizen"] = data["1"]
                 let vc = MZAboutRightController()
-                source.navigationController?.pushViewController(vc, animated: true)
+                push(vc, from: source)
                 
             case .aboutRightInUK:
-                kycData["rights"] = data["1"]
-                let vc = MZAboutRightExpirationController()
-                source.navigationController?.pushViewController(vc, animated: true)
+                let answer = data["1"] as? String
+                kycData["rights"] = answer
+                if answer?.lowercased().contains("permanently") == true {
+                    let vc = MZAboutEmploymentStatusController()
+                    push(vc, from: source)
+                } else {
+                    let vc = MZAboutRightExpirationController()
+                    push(vc, from: source)
+                }
                 
             case .aboutRightExpiration:
                 kycData["rightExpiration"] = data["1"] as? Date
                 let vc = MZAboutEmploymentStatusController()
-                source.navigationController?.pushViewController(vc, animated: true)
+                push(vc, from: source)
                 
             case .aboutEmploymentStatus:
                 kycData["employmentStatus"] = data["1"]
                 let vc = MZAboutIncomeController()
-                source.navigationController?.pushViewController(vc, animated: true)
+                push(vc, from: source)
                 
             case .aboutIncomeFromEmployment:
                 kycData["haveEmploymentIncome"] = data["1"]
                 let vc = MZFinancesLandingController()
-                source.navigationController?.setViewControllers([vc], animated: true)
+                nextSection(vc, from: source)
                 
                 
                 // FINANCES SECTION
             case .financesLanding:
                 let vc = MZFinancesIncomeController()
-                source.navigationController?.setViewControllers([vc], animated: true)
+                nextSection(vc, from: source)
                 
             case .financesAnnualIncome:
                 kycData["annualIncome"] = data["1"]
                 let vc = MZFinancesIncomeDownController()
-                source.navigationController?.pushViewController(vc, animated: true)
+                push(vc, from: source)
                 
             case .financesIncomeDown:
-                kycData["annualIncomeDown"] = data["1"]
+                let answer = data["1"] as? String
+                kycData["annualIncomeDown"] = answer?.lowercased() == "yes"
                 let vc = MZFinancesHousingController()
-                source.navigationController?.pushViewController(vc, animated: true)
+                push(vc, from: source)
                 
             case .financesHousingStatus:
-                kycData["housingStatus"] = data["1"]
-                let vc = MZFinancesRentingSpendController()
-                source.navigationController?.pushViewController(vc, animated: true)
+                let answer = data["1"] as? String
+                kycData["housingStatus"] = answer
+                if answer?.lowercased() == "renting" {
+                    let vc = MZFinancesRentingSpendController()
+                    push(vc, from: source)
+                } else {
+                    let vc = MZFinancesRelyController()
+                    push(vc, from: source)
+                }
                 
             case .financesHouseSpendingMonthly:
                 kycData["houseSpending"] = data["1"]
                 let vc = MZFinancesRelyController()
-                source.navigationController?.pushViewController(vc, animated: true)
+                push(vc, from: source)
 
             case .financesHaveReliedPeople:
-                kycData["haveRelyFinancially"] = data["1"]
-                let vc = MZFinancesRelyCountController()
-                source.navigationController?.pushViewController(vc, animated: true)
+                if let answer = data["1"] as? String {
+                    if answer.lowercased() == "yes" {
+                        kycData["haveRelyFinancially"] = true
+                        let vc = MZFinancesRelyCountController()
+                        push(vc, from: source)
+                        return
+                    }
+                }
+                
+                kycData["haveRelyFinancially"] = false
+                let vc = MZAccountLandingController()
+                nextSection(vc, from: source)
                 
             case .financesReliedPeopleCount:
                 kycData["relyFinanciallyCount"] = data["1"]
                 let vc = MZAccountLandingController()
-                source.navigationController?.setViewControllers([vc], animated: true)
+                nextSection(vc, from: source)
                 
 
             // ACCOUNT SECTION
-//            case .accountLanding:
+            case .accountLanding:
+                let vc = MZAccountFistPaymentController()
+                nextSection(vc, from: source)
                 
-//            case accountLanding
-//            case accountFirstPaymentFrom
-//            case accountHowMuchFirstPayment
-//            case accountHowUseMonzo
-//            case accountHowMuchDepositMonthly
-//            case accountDoesInternationalTransfer
-//            case accountWhereTransfer
+            case .accountFirstPaymentFrom:
+                kycData["firstPaymentFrom"] = data["1"]
+                let vc = MZAccountFirstPaymentAmountController()
+                push(vc, from: source)
+                
+            case .accountHowMuchFirstPayment:
+                kycData["firstPaymentAmount"] = data["1"]
+                let vc = MZAccountHowUseController()
+                push(vc, from: source)
+                
+            case .accountHowUseMonzo:
+                kycData["usagePurpose"] = data["1"]
+                let vc = MZAccountAmountMonthlyController()
+                push(vc, from: source)
+                
+            case .accountHowMuchDepositMonthly:
+                kycData["depositMonthly"] = data["1"]
+                let vc = MZAccountInternationTransferController()
+                push(vc, from: source)
+                
+            case .accountDoesInternationalTransfer:
+                if let answer = data["1"] as? String {
+                    let yes = answer.lowercased() == "yes"
+                    if yes {
+                        kycData["internationalTransfer"] = true
+                        let vc = MZAccountTransferToCountryController()
+                        push(vc, from: source)
+                        return
+                    }
+                }
+                
+                kycData["internationalTransfer"] = false
+                let vc = MZIdentityLandingController()
+                nextSection(vc, from: source)
+                
+            case .accountWhereTransfer:
+                kycData["internationalTransferDestination"] = data["1"]
+                let vc = MZIdentityLandingController()
+                nextSection(vc, from: source)
 
             default:
                 break
         }
+    }
+    
+    private func push(_ vc: UIViewController, from source: UIViewController) {
+        source.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func nextSection(_ section: UIViewController, from source: UIViewController) {
+        source.navigationController?.setViewControllers([section], animated: true)
     }
     
     func start(from root: UIViewController) {

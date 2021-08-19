@@ -10,10 +10,4 @@ class MZAboutCitizenController: MZBaseListKycController {
         titleDescritionLabel.text = "You usually are if you or your parents were born in the UK, or you moved to the UK and successfully applied for citizenship"
         listView.setData(stringArrays: ["Yes", "No"])
     }
-    
-    override func goNext() {
-        guard let answer = answers.first?.title.lowercased() else { return }
-        let isBritishCitizen = answer == "yes"
-        router.goNext(from: self, data: ["1": isBritishCitizen])
-    }
 }

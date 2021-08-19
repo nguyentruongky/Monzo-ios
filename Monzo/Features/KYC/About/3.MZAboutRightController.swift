@@ -15,10 +15,5 @@ class MZAboutRightController: MZBaseListKycController {
             "I don't have the right to live in the UK",
         ]
         listView.setData(stringArrays: rights)
-    }
-    
-    override func goNext() {
-        guard let answer = answers.first?.title else { return }
-        router.goNext(from: self, data: ["1": answer])
-    }
+    }    
 }

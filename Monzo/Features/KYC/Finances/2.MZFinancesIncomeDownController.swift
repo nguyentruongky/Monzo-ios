@@ -3,7 +3,7 @@
 import UIKit
 
 class MZFinancesIncomeDownController: MZBaseListKycController {
-    override var step: KycRouter.Step { .financesAnnualIncome }
+    override var step: KycRouter.Step { .financesIncomeDown }
 
     override func setData() {
         sectionLabel.text = "YOUR FINANCES"
