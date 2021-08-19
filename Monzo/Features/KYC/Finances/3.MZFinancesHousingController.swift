@@ -3,6 +3,8 @@
 import UIKit
 
 class MZFinancesHousingController: MZBaseListKycController {
+    override var step: KycRouter.Step { .financesHousingStatus }
+
     override func setData() {
         sectionLabel.text = "YOUR FINANCES"
         titleLabel.text = "What's your housing status?"

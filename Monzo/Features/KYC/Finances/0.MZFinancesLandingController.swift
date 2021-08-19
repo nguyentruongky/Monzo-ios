@@ -2,6 +2,8 @@
 import UIKit
 
 class MZFinancesLandingController: MZSectionListController {
+    override var step: KycRouter.Step { .accountLanding }
+    
     override var descriptionText: String {
         "That's 1 section down, 3 to go..."
     }

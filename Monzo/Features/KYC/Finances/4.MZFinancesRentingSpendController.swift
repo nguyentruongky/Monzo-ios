@@ -3,6 +3,8 @@
 import UIKit
 
 class MZFinancesRentingSpendController: MZTextKycController {
+    override var step: KycRouter.Step { .financesHouseSpendingMonthly }
+
     override func setData() {
         sectionLabel.text = "YOUR FINANCES"
         titleLabel.text = "How much do you spend on rent each month?"

@@ -3,6 +3,8 @@
 import UIKit
 
 class MZFinancesIncomeController: MZTextKycController {
+    override var step: KycRouter.Step { .financesAnnualIncome }
+
     override func setData() {
         sectionLabel.text = "YOUR FINANCES"
         titleLabel.text = "What's your annual income before tax?"
