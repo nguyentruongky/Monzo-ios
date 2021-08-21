@@ -20,8 +20,6 @@
 		2659A3B926CC71D20001BB93 /* MZSectionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2659A3B826CC71D20001BB93 /* MZSectionListController.swift */; };
 		26916B3B26CB586000AC9436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B3A26CB586000AC9436 /* AppDelegate.swift */; };
 		26916B3D26CB586000AC9436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B3C26CB586000AC9436 /* SceneDelegate.swift */; };
-		26916B3F26CB586000AC9436 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B3E26CB586000AC9436 /* ViewController.swift */; };
-		26916B4226CB586000AC9436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26916B4026CB586000AC9436 /* Main.storyboard */; };
 		26916B4426CB586D00AC9436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26916B4326CB586D00AC9436 /* Assets.xcassets */; };
 		26916B4726CB586D00AC9436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26916B4526CB586D00AC9436 /* LaunchScreen.storyboard */; };
 		26916B5226CB586E00AC9436 /* MonzoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916B5126CB586E00AC9436 /* MonzoTests.swift */; };
@@ -102,8 +100,6 @@
 		26916B3726CB586000AC9436 /* Monzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26916B3A26CB586000AC9436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26916B3C26CB586000AC9436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		26916B3E26CB586000AC9436 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		26916B4126CB586000AC9436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26916B4326CB586D00AC9436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26916B4626CB586D00AC9436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26916B4826CB586D00AC9436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -185,6 +181,8 @@
 		2659A3A226CC52430001BB93 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				26916B4326CB586D00AC9436 /* Assets.xcassets */,
+				26916B4526CB586D00AC9436 /* LaunchScreen.storyboard */,
 				2659A3A326CC52500001BB93 /* Fonts */,
 			);
 			path = Resources;
@@ -227,13 +225,7 @@
 				2659A3A226CC52430001BB93 /* Resources */,
 				26916C8426CB8D0A00AC9436 /* Features */,
 				26916BF826CB640300AC9436 /* Kits */,
-				26916B3A26CB586000AC9436 /* AppDelegate.swift */,
-				26916B3C26CB586000AC9436 /* SceneDelegate.swift */,
-				26916B3E26CB586000AC9436 /* ViewController.swift */,
-				26916B4026CB586000AC9436 /* Main.storyboard */,
-				26916B4326CB586D00AC9436 /* Assets.xcassets */,
-				26916B4526CB586D00AC9436 /* LaunchScreen.storyboard */,
-				26916B4826CB586D00AC9436 /* Info.plist */,
+				26CEE63126D14F6B00AEDC83 /* Configuration */,
 			);
 			path = Monzo;
 			sourceTree = "<group>";
@@ -291,6 +283,16 @@
 				26EBBC0926CE25E7003D878E /* KycRouter.swift */,
 			);
 			path = KYC;
+			sourceTree = "<group>";
+		};
+		26CEE63126D14F6B00AEDC83 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				26916B3A26CB586000AC9436 /* AppDelegate.swift */,
+				26916B3C26CB586000AC9436 /* SceneDelegate.swift */,
+				26916B4826CB586D00AC9436 /* Info.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		26EBBBC426CD0395003D878E /* About */ = {
@@ -475,7 +477,6 @@
 				26916B4426CB586D00AC9436 /* Assets.xcassets in Resources */,
 				2659A3A826CC525B0001BB93 /* SF-Pro-Text-Bold.otf in Resources */,
 				2659A3A926CC525B0001BB93 /* SF-Pro-Text-Medium.otf in Resources */,
-				26916B4226CB586000AC9436 /* Main.storyboard in Resources */,
 				2659A3AB26CC525B0001BB93 /* SF-Pro-Text-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,7 +502,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26916B3F26CB586000AC9436 /* ViewController.swift in Sources */,
 				26EBBBFE26CDA100003D878E /* 7.MZIdentityTaxUSController.swift in Sources */,
 				26EBBC0626CE245A003D878E /* MZKycProcessingController.swift in Sources */,
 				26EBBBD426CD0CE5003D878E /* 1.MZFinancesIncomeController.swift in Sources */,
@@ -588,14 +588,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		26916B4026CB586000AC9436 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				26916B4126CB586000AC9436 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		26916B4526CB586D00AC9436 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -730,7 +722,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YM62LBZ4XN;
-				INFOPLIST_FILE = Monzo/Info.plist;
+				INFOPLIST_FILE = Monzo/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -749,7 +741,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YM62LBZ4XN;
-				INFOPLIST_FILE = Monzo/Info.plist;
+				INFOPLIST_FILE = Monzo/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
